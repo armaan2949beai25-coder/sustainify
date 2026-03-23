@@ -145,10 +145,14 @@ app-navbar {
     padding: 1rem 0;
 }
 .mobile-nav a {
-    color: var(--text-main);
+    color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
+    transition: 0.3s;
+}
+.mobile-nav a:hover {
+    color: var(--secondary);
 }
 
 /* Glassmorphism Classes */

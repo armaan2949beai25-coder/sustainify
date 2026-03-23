@@ -49,9 +49,9 @@ class AppNavbar extends HTMLElement {
                 mobileNav.classList.toggle('active');
                 const icon = menuToggle.querySelector('i');
                 if (mobileNav.classList.contains('active')) {
-                    icon.className = 'bx bx-x';
+                    icon.classList.replace('bx-menu', 'bx-x');
                 } else {
-                    icon.className = 'bx bx-menu';
+                    icon.classList.replace('bx-x', 'bx-menu');
                 }
             });
         }
