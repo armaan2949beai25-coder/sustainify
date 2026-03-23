@@ -32,7 +32,9 @@ class AppNavbar extends HTMLElement {
                 <ul class="nav-links">
                     ${renderLinks()}
                 </ul>
-                <button class="menu-btn" id="menuToggle"><i class='bx bx-menu'></i></button>
+                <button class="menu-btn" id="menuToggle" onclick="this.closest('app-navbar').toggleMenu()">
+                    <i class='bx bx-menu'></i>
+                </button>
             </nav>
             <div class="mobile-nav" id="mobileNav">
                 <ul>
@@ -40,20 +42,19 @@ class AppNavbar extends HTMLElement {
                 </ul>
             </div>
         `;
+    }
 
-        const menuToggle = this.querySelector('#menuToggle');
+    toggleMenu() {
         const mobileNav = this.querySelector('#mobileNav');
-        
-        if (menuToggle && mobileNav) {
-            menuToggle.addEventListener('click', () => {
-                mobileNav.classList.toggle('active');
-                const icon = menuToggle.querySelector('i');
-                if (mobileNav.classList.contains('active')) {
-                    icon.classList.replace('bx-menu', 'bx-x');
-                } else {
-                    icon.classList.replace('bx-x', 'bx-menu');
-                }
-            });
+        const menuToggle = this.querySelector('#menuToggle');
+        if (mobileNav && menuToggle) {
+            mobileNav.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (mobileNav.classList.contains('active')) {
+                icon.classList.replace('bx-menu', 'bx-x');
+            } else {
+                icon.classList.replace('bx-x', 'bx-menu');
+            }
         }
     }
 }
