@@ -844,9 +844,11 @@ footer {
 .row-group {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 .row-group .col {
     flex: 1;
+    min-width: 250px;
 }
 
 .justify-end {
@@ -885,15 +887,30 @@ footer {
 
 /* Responsive */
 @media (max-width: 992px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
     .hero {
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        min-height: auto;
+        padding-top: 8rem;
+    }
+    .hero-frame {
+        margin: 2rem auto;
+        padding: 4rem 1.5rem;
     }
     .cta-group {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        width: 100%;
+        justify-content: center;
     }
     .hero-graphics {
-        display: none; /* Simplify on small screens to prioritize content */
+        display: none;
     }
     .calculator-grid {
         grid-template-columns: 1fr;
@@ -908,7 +925,44 @@ footer {
         display: block;
     }
     .hero-content h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem !important;
+    }
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+    .glass-section {
+        padding: 3rem 1.5rem;
+    }
+    .grid-cards, .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .step-content-overlay h2 {
+        font-size: 1.8rem;
+    }
+    .step-content-overlay .step-desc {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .result-dashboard-overlay {
+        padding: 1.5rem;
+    }
+    .big-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem !important;
+    }
+    .hero-frame {
+        padding: 2.5rem 1rem;
+    }
+    .navbar {
+        padding: 0.8rem 5%;
+    }
+    .logo {
+        font-size: 1.5rem;
     }
 }
 

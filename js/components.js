@@ -40,6 +40,21 @@ class AppNavbar extends HTMLElement {
                 </ul>
             </div>
         `;
+
+        const menuToggle = this.querySelector('#menuToggle');
+        const mobileNav = this.querySelector('#mobileNav');
+        
+        if (menuToggle && mobileNav) {
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (mobileNav.classList.contains('active')) {
+                    icon.className = 'bx bx-x';
+                } else {
+                    icon.className = 'bx bx-menu';
+                }
+            });
+        }
     }
 }
 
