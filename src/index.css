@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sustain-dark: #0f2e24; /* Background for navbar */
+  --color-sustain-green: #23854b; /* Solid dark green */
+  --color-sustain-light: #4ade80; /* Brighter green */
+  --color-sustain-yellow: #fcd34d;
+  --color-sustain-bg: #fdfbf5; /* Soft off-white */
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-sustain-bg)] text-slate-800 font-sans antialiased overflow-x-hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9; 
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; 
+}
+
+/* Light Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 32px rgba(15, 46, 36, 0.08); /* slight dark green shadow */
+}
+
+/* Animated Background CSS for SDG Website */
+.bg-sun {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, #fcd34d 0%, rgba(252, 211, 77, 0.2) 60%, rgba(252,211,77,0) 80%);
+    border-radius: 50%;
+    box-shadow: 0 0 120px #fcd34d;
+}
+.bg-hill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: block;
+}
+.bg-h3 { height: 40%; z-index: 1; }
+.bg-h2 { height: 30%; z-index: 2; }
+.bg-h1 { height: 20%; z-index: 3; }
+
+/* Clouds */
+.bg-cloud {
+    position: absolute;
+    background: #fff;
+    border-radius: 50px;
+    animation: floatCloud linear infinite;
+    opacity: 0.8;
+}
+.bg-cloud::before, .bg-cloud::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+.bg-c1 { width: 120px; height: 40px; top: 15%; left: -150px; animation-duration: 40s; animation-delay: 0s; }
+.bg-c1::before { width: 60px; height: 60px; top: -30px; left: 15px; }
+.bg-c1::after { width: 50px; height: 50px; top: -20px; right: 15px; }
+
+.bg-c2 { width: 80px; height: 30px; top: 25%; left: -100px; animation-duration: 60s; opacity: 0.6; animation-delay: -20s; }
+.bg-c2::before { width: 40px; height: 40px; top: -20px; left: 10px; }
+.bg-c2::after { width: 30px; height: 30px; top: -15px; right: 10px; }
+
+.bg-c3 { width: 150px; height: 50px; top: 5%; left: -200px; animation-duration: 50s; opacity: 0.7; animation-delay: -10s; }
+.bg-c3::before { width: 70px; height: 70px; top: -40px; left: 20px; }
+.bg-c3::after { width: 60px; height: 60px; top: -30px; right: 20px; }
+
+@keyframes floatCloud {
+    from { transform: translateX(0); }
+    to { transform: translateX(120vw); }
+}
+
+/* Hot Air Balloon */
+.bg-balloon {
+    position: absolute;
+    top: 30%;
+    left: -100px;
+    animation: floatBalloon 45s linear infinite;
+    z-index: 1;
+}
+.bg-balloon-top {
+    width: 50px;
+    height: 60px;
+    background: #f43f5e;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    box-shadow: inset -10px -5px 0 rgba(0,0,0,0.1);
+}
+.bg-balloon-top::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 8px;
+    background: #e11d48;
+}
+.bg-balloon-basket {
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 12px;
+    background: #b45309;
+    border-radius: 2px;
+}
+.bg-balloon-basket::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 2px;
+    width: 1px;
+    height: 12px;
+    background: #78350f;
+    box-shadow: 11px 0 0 #78350f;
+}
+
+@keyframes floatBalloon {
+    from { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(50vw) translateY(-40px); }
+    to { transform: translateX(120vw) translateY(10px); }
+}
+
+/* Trees */
+.bg-tree {
+    position: relative;
+    animation: bgSway 4s ease-in-out infinite alternate;
+    transform-origin: bottom center;
+}
+.bg-trunk {
+    width: 10px;
+    height: 30px;
+    background: #78350f;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+.bg-leaves {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: #15803d;
+    border-radius: 50%;
+    box-shadow: inset -10px -10px 0 rgba(0,0,0,0.1);
+}
+.bg-pine-leaves {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 70px solid #065f46;
+}
+.bg-pine-leaves::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 50px solid #065f46;
+}
+
+@keyframes bgSway {
+    from { transform: rotate(-3deg); }
+    to { transform: rotate(4deg); }
+}
+
+/* Eco House */
+.bg-eco-house {
+    position: absolute;
+}
+.bg-house-base {
+    width: 80px;
+    height: 50px;
+    background: #f8fafc;
+    border: 2px solid #cbd5e1;
+    border-bottom: none;
+    position: relative;
+}
+.bg-house-roof {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 30px solid #334155;
+}
+.bg-solar-panel {
+    position: absolute;
+    top: 6px;
+    left: -32px;
+    width: 40px;
+    height: 15px;
+    background: #0ea5e9;
+    transform: rotate(31deg);
+    border: 2px solid #0284c7;
+    border-radius: 2px;
+}
+.bg-house-door {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 30px;
+    background: #b45309;
+}
+.bg-house-window {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    background: #bae6fd;
+    border: 2px solid #94a3b8;
+}
+.bg-house-window.bg-right-win {
+    left: auto;
+    right: 10px;
+}
