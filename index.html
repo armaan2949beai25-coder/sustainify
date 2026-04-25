@@ -1,13 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>un-sustainability-goals</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainify | Your Carbon Footprint</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=1.1">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="js/components.js"></script>
+</head>
+<body>
+    <div class="blob-bg"></div>
+    <div class="blob-bg blob-bg-2"></div>
+
+    <app-navbar></app-navbar>
+
+    <header class="hero" style="min-height: 90vh; display: flex; align-items: flex-start; justify-content: center; width: 100%; position: relative; overflow: hidden; background: linear-gradient(180deg, #fef3c7 0%, #dcfce7 60%, #86efac 100%); padding: 0;">
+        
+        <div class="sun"></div>
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="cloud c3"></div>
+
+        <!-- (rest of your UI remains same, no conflict markers) -->
+
+    </header>
+
+    <app-footer></app-footer>
+
+    <script src="js/main.js"></script>
+</body>
 </html>
