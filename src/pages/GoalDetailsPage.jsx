@@ -165,7 +165,7 @@ const GoalDetailsPage = () => {
                     Take actionable steps towards combating climate change by understanding your own impact. Use our interactive Carbon Footprint Calculator to estimate your emissions and discover personalized ways to reduce them.
                   </p>
                   <a 
-                    href="/project_NAS/index.html" 
+                    href="./project_NAS/index.html" 
                     className="inline-flex items-center gap-2 px-8 py-4 bg-[#166534] hover:bg-[#14532d] text-white rounded-full font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                   >
                     Open Calculator &rarr;
