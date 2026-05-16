@@ -57,7 +57,7 @@ function renderSDGs() {
     if (!sdgGrid) return;
     
     const cardsHTML = sdgs.map(sdg => {
-        const pageLink = `../SDG - ${sdg.id}/index.html`; 
+        const pageLink = `./sdg-${sdg.id}/index.html`; 
         
         return `
             <a href="${pageLink}" class="sdg-card" style="--sdg-color: ${sdg.color}; text-decoration: none; color: inherit;">
