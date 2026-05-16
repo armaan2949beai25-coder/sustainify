@@ -28,10 +28,12 @@ const navLinks = document.querySelectorAll('.nav-links a');
 
 // 3. Sticky Navbar effect on scroll
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     }
     
     // Active link highlighting
@@ -44,12 +46,14 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active');
-        }
-    });
+    if (navLinks) {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (current && link.getAttribute('href') && link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    }
 });
 
 // 4. Render SDG Cards dynamically
