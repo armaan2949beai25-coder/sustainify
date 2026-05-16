@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 3 - Good Health & Well-Being | Sustainify</title>
+    <meta name="description" content="Learn about SDG 3 - Good Health & Well-Being. Explore health focus areas, statistics, and calculate your BMI.">
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Background overlay (if needed, mostly handled in CSS) -->
+    <div class="bg-overlay"></div>
+
+    <!-- Floating Navbar -->
+    <nav class="navbar glass-panel">
+        <div class="nav-left">
+            <i class="fa-solid fa-heart-pulse logo-icon"></i>
+            <span class="logo-text">Sustainify</span>
+        </div>
+        <ul class="nav-center">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#focus">Focus Areas</a></li>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#calculator">BMI Calculator</a></li>
+            <li><a href="#tips">Tips</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="#about" class="btn-primary btn-small">Learn More</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content glass-card">
+            <div class="pulse-ring">
+                <i class="fa-solid fa-stethoscope hero-icon"></i>
+            </div>
+            <h1>Good Health & Well-Being</h1>
+            <h2>Healthy Lives for Everyone</h2>
+            <p>Well-being starts with awareness. Ensure healthy lives and promote well-being for all at all ages.</p>
+            <a href="#focus" class="btn-primary">Explore Health Areas</a>
+        </div>
+    </section>
+
+    <!-- About SDG 3 -->
+    <section id="about" class="about-section">
+        <div class="section-header glass-title">
+            <h2>Why Health Matters</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-card glass-card">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Universal Healthcare</h3>
+                <p>Ensuring everyone has access to quality essential healthcare services without financial hardship.</p>
+            </div>
+            <div class="about-card glass-card">
+                <i class="fa-solid fa-brain"></i>
+                <h3>Mental Wellness</h3>
+                <p>Promoting mental health and well-being as a core component of overall health.</p>
+            </div>
+            <div class="about-card glass-card">
+                <i class="fa-solid fa-shield-virus"></i>
+                <h3>Disease Prevention</h3>
+                <p>Fighting communicable diseases and reducing premature mortality from non-communicable diseases.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Focus Areas (Staggered Layout) -->
+    <section id="focus" class="focus-section">
+        <div class="section-header glass-title">
+            <h2>Key Focus Areas</h2>
+        </div>
+        <div class="staggered-grid">
+            <div class="focus-card glass-card">
+                <i class="fa-solid fa-apple-whole"></i>
+                <h3>Nutrition</h3>
+                <p>A balanced diet fuels the body and strengthens the immune system.</p>
+            </div>
+            <div class="focus-card glass-card offset-card">
+                <i class="fa-solid fa-person-running"></i>
+                <h3>Fitness</h3>
+                <p>Regular physical activity reduces the risk of many chronic conditions.</p>
+            </div>
+            <div class="focus-card glass-card">
+                <i class="fa-solid fa-syringe"></i>
+                <h3>Vaccination</h3>
+                <p>Immunization prevents millions of deaths every year globally.</p>
+            </div>
+            <div class="focus-card glass-card offset-card">
+                <i class="fa-solid fa-person-breastfeeding"></i>
+                <h3>Maternal Health</h3>
+                <p>Reducing the global maternal mortality ratio and ensuring safe births.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Stats -->
+    <section id="stats" class="stats-section">
+        <div class="section-header glass-title">
+            <h2>Global Health Statistics</h2>
+        </div>
+        <div class="stats-container glass-panel">
+            <div class="stat-item">
+                <svg class="circular-chart" viewBox="0 0 36 36">
+                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" stroke-dasharray="70, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <div class="stat-content">
+                    <div class="stat-number"><h3 class="counter" data-target="73">0</h3><span>%</span></div>
+                    <p>Healthcare Access</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <svg class="circular-chart" viewBox="0 0 36 36">
+                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <div class="stat-content">
+                    <div class="stat-number"><h3 class="counter" data-target="86">0</h3><span>%</span></div>
+                    <p>Global Vaccination</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <svg class="circular-chart" viewBox="0 0 36 36">
+                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" stroke-dasharray="73, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <div class="stat-content">
+                    <div class="stat-number"><h3 class="counter" data-target="73">0</h3><span>yrs</span></div>
+                    <p>Life Expectancy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive BMI Calculator -->
+    <section id="calculator" class="calc-section">
+        <div class="calc-container glass-card">
+            <h2><i class="fa-solid fa-weight-scale"></i> BMI Calculator</h2>
+            <p>Check your Body Mass Index (BMI) to understand your health category.</p>
+            
+            <form id="bmi-form">
+                <div class="input-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" placeholder="e.g. 175" required>
+                </div>
+                <div class="input-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="e.g. 70" required>
+                </div>
+                <button type="submit" class="btn-primary w-100">Calculate BMI</button>
+            </form>
+
+            <div id="bmi-result" class="hidden">
+                <h3 id="bmi-value">--</h3>
+                <div class="bmi-category-box" id="bmi-category">Result will appear here</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Tips -->
+    <section id="tips" class="tips-section">
+        <div class="section-header glass-title">
+            <h2>Daily Wellness Habits</h2>
+        </div>
+        <div class="tips-grid">
+            <div class="tip-card glass-panel">
+                <i class="fa-solid fa-glass-water"></i>
+                <p>Stay hydrated by drinking at least 8 glasses of water a day.</p>
+            </div>
+            <div class="tip-card glass-panel">
+                <i class="fa-solid fa-bed"></i>
+                <p>Aim for 7-9 hours of quality sleep every night.</p>
+            </div>
+            <div class="tip-card glass-panel">
+                <i class="fa-solid fa-hands-bubbles"></i>
+                <p>Wash your hands regularly to prevent the spread of germs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="footer-left">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <div>
+                <h3>Sustainify</h3>
+                <p>Good Health & Well-Being</p>
+            </div>
+        </div>
+        <div class="footer-center">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#focus">Focus Areas</a>
+                <a href="#calculator">BMI Calculator</a>
+            </div>
+            <div class="footer-built">Built by NAS</div>
+        </div>
+        <div class="footer-right">
+            <a href="https://www.who.int/" target="_blank" class="btn-primary btn-small">Explore WHO</a>
+            <a href="#home" class="back-to-top" aria-label="Back to top">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

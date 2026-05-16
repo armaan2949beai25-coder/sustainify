@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 4 - Quality Education</title>
+    <!-- Link to custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Modern Google Fonts: Inter for readability, Outfit for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Animated Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-bar"></div>
+    </div>
+
+    <!-- Light Warm Overlay to blend with the background image -->
+    <div class="bg-overlay"></div>
+
+    <!-- Floating Glassmorphism Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-04.jpg" alt="" class="logo-icon" style="height: 34px; width: auto; object-fit: contain; margin-right: 8px; border-radius: 4px;">
+            <span class="logo-text" style="font-weight: 700; font-size: 1.2rem;">Sustainify</span>
+        </div>
+        <div class="nav-center">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#pathways">Learning Areas</a>
+            <a href="#stats">Education Impact</a>
+            <a href="#quiz">Quiz</a>
+        </div>
+        <div class="nav-right">
+            <button class="cta-btn small" onclick="document.getElementById('pathways').scrollIntoView({behavior: 'smooth'})">Explore Goals</button>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content glass-panel transparent">
+                <h1><span class="hero-s">S<span class="hero-cap-icon">🎓</span></span>SDG 4 – Quality Education</h1>
+                <h2 class="tagline">Education Unlocks Opportunity</h2>
+                <p>Ensuring inclusive and equitable quality education and promoting lifelong learning opportunities for all.</p>
+                <button class="cta-btn large">Explore Pathways</button>
+            </div>
+        </section>
+
+        <!-- About SDG 4 Section (Compact Icon Cards) -->
+        <section id="about" class="about-section">
+            <div class="section-header glass-panel transparent">
+                <h2>About SDG 4</h2>
+                <p>Empowering minds through equitable access to knowledge.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-panel inner">
+                    <div class="card-icon">🌍</div>
+                    <h3>Equal Access</h3>
+                    <p>Providing quality education opportunities for everyone, everywhere.</p>
+                </div>
+                <div class="about-card glass-panel inner">
+                    <div class="card-icon">💻</div>
+                    <h3>Digital Learning</h3>
+                    <p>Bridging the digital divide with modern educational tools.</p>
+                </div>
+                <div class="about-card glass-panel inner">
+                    <div class="card-icon">📈</div>
+                    <h3>Lifelong Learning</h3>
+                    <p>Continuous skill development across all ages and stages of life.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Unique Visual Section: Connected Learning Pathways (Zig-Zag) -->
+        <section id="pathways" class="pathways-section">
+            <div class="section-header glass-panel transparent">
+                <h2>Learning Pathways</h2>
+                <p>Navigate the journey to a brighter future through continuous growth.</p>
+            </div>
+            
+            <div class="pathway-container">
+                <!-- Connected Node 1 -->
+                <div class="pathway-node left glass-panel inner">
+                    <div class="node-icon">💻</div>
+                    <div class="node-content">
+                        <h3>Digital Literacy</h3>
+                        <p>Access to modern technology and vital digital skills.</p>
+                        <!-- Glowing animated line on hover -->
+                        <div class="progress-indicator"></div>
+                    </div>
+                </div>
+                
+                <!-- Connected Node 2 -->
+                <div class="pathway-node right glass-panel inner">
+                    <div class="node-icon">🔬</div>
+                    <div class="node-content">
+                        <h3>STEM Education</h3>
+                        <p>Focusing on Science, Technology, Engineering, and Mathematics.</p>
+                        <div class="progress-indicator"></div>
+                    </div>
+                </div>
+                
+                <!-- Connected Node 3 -->
+                <div class="pathway-node left glass-panel inner">
+                    <div class="node-icon">📖</div>
+                    <div class="node-content">
+                        <h3>Foundational Skills</h3>
+                        <p>Securing universal literacy and numeracy for youth globally.</p>
+                        <div class="progress-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Stats Dashboard -->
+        <section id="stats" class="stats-section">
+            <div class="section-header glass-panel transparent">
+                <h2>Global Education Impact</h2>
+            </div>
+            <div class="stats-container">
+                <!-- Stat Item 1 -->
+                <div class="stat-item glass-panel inner">
+                    <div class="stat-circle">
+                        <!-- SVG for circular progress animation -->
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="86, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <!-- Counter element updated by JS -->
+                        <div class="stat-value counter" data-target="86">0</div><span class="percent">%</span>
+                    </div>
+                    <h4>Global Literacy Rate</h4>
+                </div>
+                <!-- Stat Item 2 -->
+                <div class="stat-item glass-panel inner">
+                    <div class="stat-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <div class="stat-value counter" data-target="75">0</div><span class="percent">%</span>
+                    </div>
+                    <h4>Digital Access</h4>
+                </div>
+                <!-- Stat Item 3 -->
+                <div class="stat-item glass-panel inner">
+                    <div class="stat-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <div class="stat-value counter" data-target="90">0</div><span class="percent">%</span>
+                    </div>
+                    <h4>Primary Enrollment</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Feature: Quiz Card System -->
+        <section id="quiz" class="quiz-section">
+            <div class="quiz-container glass-panel inner">
+                <div class="quiz-header">
+                    <h2>Knowledge Check</h2>
+                    <p>Test your understanding of SDG 4</p>
+                </div>
+                
+                <!-- Quiz DOM Container -->
+                <div id="quiz-area" class="quiz-area">
+                    <div id="question-container">
+                        <h3 id="question-text">Loading question...</h3>
+                        <div id="options-container" class="options-grid">
+                            <!-- Options generated dynamically by script.js -->
+                        </div>
+                    </div>
+                    <div class="quiz-footer">
+                        <span id="question-tracker">Question 1 of 3</span>
+                        <button id="next-btn" class="cta-btn small" disabled>Next</button>
+                    </div>
+                </div>
+                
+                <!-- Results DOM Container -->
+                <div id="result-area" class="result-area hidden">
+                    <h3 id="result-message"></h3>
+                    <p id="result-score"></p>
+                    <button id="restart-btn" class="cta-btn">Retry Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Tips (Staggered Grid) -->
+        <section id="tips" class="tips-section">
+            <div class="section-header glass-panel transparent">
+                <h2>Learning Tips</h2>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card glass-panel inner notebook">
+                    <h4>📝 Active Recall</h4>
+                    <p>Test yourself instead of just re-reading notes.</p>
+                </div>
+                <div class="tip-card glass-panel inner notebook offset-down">
+                    <h4>⏰ Pomodoro Technique</h4>
+                    <p>Study for 25 mins, then take a 5 min break.</p>
+                </div>
+                <div class="tip-card glass-panel inner notebook">
+                    <h4>🎯 Set Goals</h4>
+                    <p>Define clear, achievable goals for each session.</p>
+                </div>
+                <div class="tip-card glass-panel inner notebook offset-down">
+                    <h4>🤝 Teach Others</h4>
+                    <p>Explaining concepts helps solidify your own understanding.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Premium Dark Glassmorphism Footer -->
+    <footer class="glass-footer">
+        <div class="footer-left">
+            <div class="footer-logo" style="display: flex; align-items: center;">
+                <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-04.jpg" alt="" style="height: 34px; width: auto; object-fit: contain; margin-right: 10px; border-radius: 4px;">
+                <span>Sustainify</span>
+            </div>
+            <p style="margin-top: 0.5rem;">Empowering the future through quality education.</p>
+        </div>
+        <div class="footer-center">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#pathways">Pathways</a>
+                <a href="#quiz">Quiz</a>
+            </div>
+            <div style="margin-top: 1rem; font-size: 0.85rem; color: #ccc;">
+                <p>© 2026 Sustainify. All rights reserved.</p>
+                <p style="margin-top: 0.2rem;">Built by NAS</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <a href="https://www.unesco.org/en/education" target="_blank" class="cta-btn small outline" style="text-decoration:none;">Education Resources</a>
+            <button id="back-to-top" class="top-btn" aria-label="Back to top">↑</button>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript logic -->
+    <script src="script.js"></script>
+</body>
+</html>

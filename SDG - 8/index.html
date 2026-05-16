@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainify - Decent Work & Economic Growth</title>
+    <link rel="stylesheet" href="style8.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-bar-wrap">
+        <div class="scroll-bar" id="scroll-progress"></div>
+    </div>
+
+    <!-- Floating UI Elements -->
+    <button id="back-to-top" class="flex-center glass-card" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Preloader -->
+    <div id="preloader" class="flex-center flex-col">
+        <div class="loader-circle mb-2"></div>
+        <span class="font-heading font-bold" style="color:var(--primary);letter-spacing:2px">SUSTAINIFY</span>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header id="navbar" class="nav-bar flex-between">
+        <div class="nav-logo">Sustainify</div>
+        <button class="mobile-btn" id="mobile-toggle"><i class="fas fa-bars"></i></button>
+        <nav>
+            <ul class="nav-links flex" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#skill-builder">Skill Builder</a></li>
+                <li><a href="#growth-stats">Growth Stats</a></li>
+                <li><a href="#innovation">Innovation</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero flex-center">
+            <div class="hero-card glass-card reveal">
+                <div class="hero-content">
+                    <span class="badge">SDG 8</span>
+                    <span class="bg-num">8</span>
+                    <h1 class="title">Decent Work & <br><span class="gradient-text">Economic Growth</span></h1>
+                    <p class="subtitle">Creating opportunities, empowering innovation, and building sustainable futures
+                        for everyone.</p>
+
+                    <div class="flex" style="gap:15px; margin-bottom: 50px;">
+                        <a href="#vision" class="btn btn-primary">Discover More</a>
+                        <a href="#community" class="btn btn-outline"
+                            style="border: 2px solid var(--primary); color: var(--primary);">Join the Movement</a>
+                    </div>
+                </div>
+
+                <!-- Stats inside Hero -->
+                <div class="flex-between hero-stats"
+                    style="background:rgba(255,255,255,0.1); border-radius:15px; padding:25px; border:var(--glass-border);">
+                    <div class="text-center w-full glass-hover" style="flex:1">
+                        <i class="fas fa-user-graduate card-icon"></i>
+                        <div class="stat-num"><span class="counter" data-target="58">0</span>%</div>
+                        <p class="subtitle" style="font-size:0.85rem">Youth seek better job opportunities</p>
+                    </div>
+                    <div class="text-center w-full glass-hover" style="flex:1">
+                        <i class="fas fa-laptop-code card-icon"></i>
+                        <div class="stat-num"><span class="counter" data-target="70">0</span>%</div>
+                        <p class="subtitle" style="font-size:0.85rem">Future jobs require digital skills</p>
+                    </div>
+                    <div class="text-center w-full glass-hover" style="flex:1">
+                        <i class="fas fa-rocket card-icon"></i>
+                        <div class="stat-num">Millions</div>
+                        <p class="subtitle" style="font-size:0.85rem">Startups emerging globally</p>
+                    </div>
+                </div>
+
+                <!-- Floating Background Icons -->
+                <i class="fas fa-chart-line float-icon" style="top:20%; right:10%"></i>
+                <i class="fas fa-lightbulb float-icon"
+                    style="bottom:30%; right:25%; font-size:3rem; animation-delay:2s"></i>
+                <i class="fas fa-coins float-icon" style="top:40%; left:15%; animation-delay:4s"></i>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section id="vision" class="section-pad">
+            <div class="container">
+                <header class="sec-head reveal text-center">
+                    <h2 class="title">Building Opportunities <span class="gradient-text">For Everyone</span></h2>
+                    <p class="subtitle">Empowering global workforce through innovative solutions and sustainable
+                        practices.</p>
+                </header>
+
+                <div class="grid-auto reveal">
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-users card-icon"></i>
+                        <h3 class="font-heading mb-2">Inclusive Employment</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Fostering work environments that embrace
+                            diversity, equity, and inclusion for all professionals.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-network-wired card-icon"></i>
+                        <h3 class="font-heading mb-2">Digital Transformation</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Equipping businesses and individuals with the
+                            tools to thrive in the modern digital economy.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-chart-pie card-icon"></i>
+                        <h3 class="font-heading mb-2">Financial Growth</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Promoting strategies that ensure long-term, stable
+                            financial prosperity and economic resilience.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-child card-icon"></i>
+                        <h3 class="font-heading mb-2">Youth Empowerment</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Creating clear pathways and opportunities for the
+                            next generation of leaders and innovators.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-balance-scale card-icon"></i>
+                        <h3 class="font-heading mb-2">Equal Opportunities</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Ensuring fair access to career advancement,
+                            resources, and leadership roles globally.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-leaf card-icon"></i>
+                        <h3 class="font-heading mb-2">Sustainable Businesses</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Supporting enterprises that balance profitability
+                            with environmental and social responsibility.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Builder Section -->
+        <section id="skill-builder" class="section-pad">
+            <div class="container">
+                <header class="sec-head reveal text-center">
+                    <h2 class="title">Interactive <span class="gradient-text">Skill Builder</span></h2>
+                    <p class="subtitle">Track your productivity and accelerate your professional growth.</p>
+                </header>
+
+                <div class="glass-card dashboard reveal">
+                    <div class="skill-inputs">
+                        <h3 class="font-heading text-center" style="margin-bottom:25px">Log Your Progress</h3>
+                        <form id="skill-form">
+                            <div class="input-group">
+                                <label for="learning-hours"><i class="fas fa-book-open"></i> Learning Hours</label>
+                                <input type="number" id="learning-hours" class="form-input" min="0" max="100" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="coding-practice"><i class="fas fa-code"></i> Coding Practice (Hrs)</label>
+                                <input type="number" id="coding-practice" class="form-input" min="0" max="100"
+                                    value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="reading-hours"><i class="fas fa-book"></i> Reading Hours</label>
+                                <input type="number" id="reading-hours" class="form-input" min="0" max="100" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label for="projects-completed"><i class="fas fa-tasks"></i> Projects Completed</label>
+                                <input type="number" id="projects-completed" class="form-input" min="0" max="20"
+                                    value="0">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full">Calculate Growth Score</button>
+                        </form>
+                    </div>
+
+                    <div class="flex-col flex-center text-center">
+                        <h3 class="font-heading" style="margin-bottom:25px">Your Dashboard</h3>
+                        <div class="ring flex-center" id="score-circle">
+                            <div class="ring-inner flex-center font-heading" id="score-value">0</div>
+                        </div>
+                        <div class="w-full" style="margin-top:30px">
+                            <h4 class="font-heading" id="productivity-level">Level: Beginner</h4>
+                            <div
+                                style="background:rgba(143,24,56,0.05); border-left:4px solid var(--primary); padding:15px; margin-top:15px;">
+                                <p id="improvement-suggestions" class="subtitle" style="font-size:0.9rem">Start logging
+                                    your hours!</p>
+                                <p id="motivational-feedback" class="gradient-text font-heading"
+                                    style="margin-top:10px; font-weight:700;"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Growth Stats Section -->
+        <section id="growth-stats" class="section-pad">
+            <div class="container">
+                <header class="sec-head reveal text-center">
+                    <h2 class="title">Global <span class="gradient-text">Growth Analytics</span></h2>
+                    <p class="subtitle">Tracking the rise of the digital economy and sustainable job markets.</p>
+                </header>
+
+                <div class="grid-auto reveal">
+                    <article class="glass-card glass-hover text-center">
+                        <h3 class="font-heading" style="margin-bottom:15px">Employment Growth</h3>
+                        <div class="stat-num"><span class="counter" data-target="15">0</span>%</div>
+                        <div class="prog-track">
+                            <div class="prog-fill" style="width:0%" data-width="75%"></div>
+                        </div>
+                        <p class="subtitle" style="font-size:0.85rem">Increase in decent job opportunities.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <h3 class="font-heading" style="margin-bottom:15px">Startup Ecosystem</h3>
+                        <div class="stat-num">+<span class="counter" data-target="2">0</span>M</div>
+                        <div class="prog-track">
+                            <div class="prog-fill" style="width:0%" data-width="85%"></div>
+                        </div>
+                        <p class="subtitle" style="font-size:0.85rem">New sustainable startups registered.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <h3 class="font-heading" style="margin-bottom:15px">Women Participation</h3>
+                        <div class="stat-num"><span class="counter" data-target="47">0</span>%</div>
+                        <div class="prog-track">
+                            <div class="prog-fill" style="width:0%" data-width="65%"></div>
+                        </div>
+                        <p class="subtitle" style="font-size:0.85rem">Representation in senior roles.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <h3 class="font-heading" style="margin-bottom:15px">Digital Economy</h3>
+                        <div class="stat-num">$<span class="counter" data-target="11">0</span>T</div>
+                        <div class="prog-track">
+                            <div class="prog-fill" style="width:0%" data-width="90%"></div>
+                        </div>
+                        <p class="subtitle" style="font-size:0.85rem">Global digital economy valuation.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <h3 class="font-heading" style="margin-bottom:15px">Green Jobs</h3>
+                        <div class="stat-num"><span class="counter" data-target="24">0</span>M</div>
+                        <div class="prog-track">
+                            <div class="prog-fill" style="width:0%" data-width="80%"></div>
+                        </div>
+                        <p class="subtitle" style="font-size:0.85rem">New jobs in sustainable sectors.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation Section -->
+        <section id="innovation" class="section-pad">
+            <div class="container">
+                <header class="sec-head reveal text-center">
+                    <h2 class="title">Future <span class="gradient-text">Innovation</span></h2>
+                    <p class="subtitle">Explore the transformative forces shaping tomorrow's industries.</p>
+                </header>
+
+                <div class="grid-auto reveal">
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-robot card-icon" style="color:var(--text-dark)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">AI & Automation</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Transforming repetitive tasks into high-value
+                            strategic work.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-globe card-icon" style="color:var(--text-dark)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Digital Economy</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Building borderless opportunities through
+                            e-commerce.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-building card-icon" style="color:var(--text-dark)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Startups</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Driving economic resilience through innovative
+                            business models.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-recycle card-icon" style="color:var(--text-dark)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Sustainable Industries</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Pioneering circular economy practices that reduce
+                            waste.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-seedling card-icon" style="color:var(--text-dark)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Green Jobs</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Creating employment that preserves the
+                            environment.</p>
+                    </article>
+                    <article class="glass-card glass-hover text-center">
+                        <i class="fas fa-brain card-icon" style="color:var(--text-dark)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Smart Workforce</h3>
+                        <p class="subtitle" style="font-size:0.95rem">Fostering continuous learning and technological
+                            adaptability.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="section-pad">
+            <div class="container">
+                <header class="sec-head reveal text-center">
+                    <h2 class="title">Join The <span class="gradient-text">Community</span></h2>
+                    <p class="subtitle">Be part of the movement towards sustainable economic growth.</p>
+                </header>
+
+                <div class="glass-card reveal" style="max-width:800px; margin:0 auto;">
+                    <form id="community-form" class="flex-col" style="gap:20px;">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" class="form-input" required placeholder="John Doe">
+                                <span class="err-msg" id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-input" required
+                                    placeholder="john@example.com">
+                                <span class="err-msg" id="email-error"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profession">Profession</label>
+                                <select id="profession" class="form-input" required>
+                                    <option value="" disabled selected>Select Profession</option>
+                                    <option value="student">Student</option>
+                                    <option value="developer">Developer</option>
+                                    <option value="entrepreneur">Entrepreneur</option>
+                                    <option value="professional">Professional</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" class="form-input" required placeholder="Your Country">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Vision</label>
+                            <textarea id="message" class="form-input" rows="4" required
+                                placeholder="Share your thoughts..."></textarea>
+                        </div>
+                        <div class="flex" style="align-items:center; gap:10px;">
+                            <input type="checkbox" id="participation" required style="cursor:pointer">
+                            <label for="participation" style="cursor:pointer; font-size:0.9rem">I agree to participate
+                                in community initiatives.</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top:10px">Join Community</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="success-modal" class="modal flex-center">
+        <div class="glass-card text-center" style="max-width:400px;">
+            <i class="fas fa-check-circle" style="font-size:4rem; color:#28a745; margin-bottom:20px"></i>
+            <h3 class="font-heading" style="margin-bottom:15px; font-size:1.5rem">Welcome to Sustainify!</h3>
+            <p class="subtitle" style="margin-bottom:25px">Your application has been successfully submitted. Let's build
+                a sustainable future.</p>
+            <button id="close-modal" class="btn btn-primary">Continue</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container flex-between footer-grid" style="align-items:flex-start">
+            <div style="flex:1; min-width:250px;">
+                <div class="font-heading font-bold"
+                    style="font-size:1.8rem; color:var(--primary); margin-bottom:15px; letter-spacing:2px">
+                    <i class="fas fa-seedling" style="margin-right:10px; color:var(--primary)"></i>SUSTAINIFY
+                </div>
+                <p class="subtitle" style="font-size:0.95rem; max-width:300px">Inspiring innovation, empowering talent,
+                    and driving sustainable economic growth.</p>
+            </div>
+
+            <div class="text-center subtitle" style="flex:1; min-width:250px; font-size:0.9rem; align-self:flex-end">
+                &copy; 2026 <strong>Sustainify</strong> — Built by NAS
+            </div>
+
+            <div style="flex:1; min-width:250px; display:flex; flex-direction:column; align-items:flex-end;"
+                class="footer-right">
+                <h4 class="font-heading" style="color:var(--primary); margin-bottom:20px;">Useful Links</h4>
+                <ul class="footer-links" style="list-style:none; text-align:right; margin-bottom:25px; line-height:2;">
+                    <li><a href="https://sdgs.un.org/goals/goal8" target="_blank">United Nations SDG 8</a></li>
+                    <li><a href="https://www.weforum.org/" target="_blank">World Economic Forum</a></li>
+                    <li><a href="https://www.ilo.org/" target="_blank">International Labour Organization</a></li>
+                </ul>
+                <!-- Social Icons Removed -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="script8.js"></script>
+</body>
+
+</html>

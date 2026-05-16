@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 16: Peace, Justice & Strong Institutions</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="nav-content">
+            <div class="logo-container">
+                <svg class="sdg-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M5 8H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M5 8L3 14C3 15.6569 4.34315 17 6 17C7.65685 17 9 15.6569 9 14L7 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M19 8L17 14C17 15.6569 18.3431 17 20 17C21.6569 17 23 15.6569 23 14L21 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="brand-name">Sustainify</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#hero">Overview</a>
+                <a href="#pillars">Core Pillars</a>
+                <a href="#action">Take Action</a>
+                <a href="#assessment">Assessment</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Premium Clean Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <span class="badge">Goal 16</span>
+            <h1 class="hero-title">Promote peaceful and inclusive societies for sustainable development.</h1>
+            <p class="hero-subtitle">Provide access to justice for all and build effective, accountable and inclusive institutions at all levels.</p>
+            <div class="hero-actions">
+                <a href="#action" class="btn btn-primary">Discover Solutions</a>
+                <a href="#pillars" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Flow -->
+    <main class="main-content">
+        
+        <!-- Core Pillars -->
+        <section id="pillars" class="section-container">
+            <div class="section-header">
+                <h2>Pillars of SDG 16</h2>
+                <p>The foundation of a sustainable and equitable global society.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🕊️</div>
+                    <h3>Peace & Non-Violence</h3>
+                    <p>Significantly reduce all forms of violence and related death rates everywhere, ending abuse and exploitation.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚖️</div>
+                    <h3>Justice & Rule of Law</h3>
+                    <p>Promote the rule of law at the national and international levels and ensure equal access to justice for all.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏛️</div>
+                    <h3>Strong Institutions</h3>
+                    <p>Develop effective, accountable and transparent institutions at all levels to combat corruption and bribery.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Equality & Inclusion</h3>
+                    <p>Ensure responsive, inclusive, participatory and representative decision-making at all levels.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actions -->
+        <section id="action" class="section-container">
+            <div class="section-header">
+                <h2>Pathways to Progress</h2>
+                <p>How we can work together to achieve global harmony and justice.</p>
+            </div>
+            <div class="action-list-card card">
+                <ul class="action-list">
+                    <li><strong>Promote Transparency:</strong> Support open data initiatives and demand accountability from local governments.</li>
+                    <li><strong>Protect Human Rights:</strong> Stand up against discrimination and advocate for the vulnerable and marginalized.</li>
+                    <li><strong>Combat Corruption:</strong> Refuse bribery and support organizations dedicated to ethical business practices.</li>
+                    <li><strong>Engage in Democracy:</strong> Participate in local elections, community forums, and civic decision-making processes.</li>
+                    <li><strong>Support Legal Identity:</strong> Advocate for policies that provide free and accessible birth registration for everyone.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Assessment/Quiz & Forms -->
+        <section id="assessment" class="section-container split-section">
+            <div class="split-col card" id="quiz-col">
+                <div class="section-header-left">
+                    <h2>Knowledge Assessment</h2>
+                    <p>Test your understanding of SDG 16 principles.</p>
+                </div>
+                <div id="quiz-container">
+                    <p id="question-text" class="question-text">Loading question...</p>
+                    <div class="options-container" id="options">
+                        <!-- Options injected by JS -->
+                    </div>
+                    <p id="quiz-feedback" class="feedback"></p>
+                    <button id="next-btn" class="btn btn-primary hidden">Next Question</button>
+                </div>
+                <div id="quiz-results" class="hidden">
+                    <h3 class="results-title">Assessment Complete</h3>
+                    <p class="results-score">Your Score: <span id="score"></span> / 3</p>
+                    <button id="restart-btn" class="btn btn-secondary">Retake Assessment</button>
+                </div>
+            </div>
+
+            <div class="split-col card">
+                <div class="section-header-left">
+                    <h2>Take the Pledge</h2>
+                    <p>Commit to transparency, peace, and justice in your community.</p>
+                </div>
+                <form id="pledge-form" class="modern-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="commitment">My Commitment</label>
+                        <select id="commitment" required>
+                            <option value="" disabled selected>Select an action...</option>
+                            <option value="vote">I will participate in local elections.</option>
+                            <option value="advocate">I will advocate for human rights.</option>
+                            <option value="integrity">I will uphold ethical standards.</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Submit Pledge</button>
+                </form>
+                <div id="form-feedback" class="feedback-msg hidden">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank you for your commitment!</h3>
+                    <p id="pledge-name-response"></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left: Branding -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg class="sdg-logo-footer" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M5 8H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M5 8L3 14C3 15.6569 4.34315 17 6 17C7.65685 17 9 15.6569 9 14L7 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M19 8L17 14C17 15.6569 18.3431 17 20 17C21.6569 17 23 15.6569 23 14L21 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>SUSTAINIFY</span>
+                </div>
+                <p class="brand-tagline">Building peaceful, just, and inclusive societies for all.</p>
+            </div>
+
+            <!-- Center: Copyright -->
+            <div class="footer-copyright">
+                <p>© 2026 Sustainify — Built for SDG 16</p>
+            </div>
+
+            <!-- Right: External Resources -->
+            <div class="footer-resources">
+                <h4>External Resources</h4>
+                <ul>
+                    <li><a href="https://sdgs.un.org/goals/goal16" target="_blank">United Nations SDG 16</a></li>
+                    <li><a href="https://www.ohchr.org/" target="_blank">UN Human Rights</a></li>
+                    <li><a href="https://www.transparency.org/" target="_blank">Transparency International</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SDG 1 – No Poverty: End poverty in all its forms everywhere.">
+  <title>SDG 1 – No Poverty | Sustainify</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== TOP SCROLL PROGRESS BAR ===== -->
+  <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="navbar">
+    <div class="container nav-flex">
+      <a href="#" class="logo"><i class="fas fa-hand-holding-heart"></i> Sustainify</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#causes">Causes</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="badge">🎯 UN Sustainable Development Goal 1</span>
+      <h1>No Poverty</h1>
+      <p>End poverty in all its forms everywhere — ensuring dignity, opportunity, and hope for every person on this planet.</p>
+      <a href="#about" class="btn" id="learn-btn">
+        Learn More <i class="fas fa-arrow-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SDG 1 ===== -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title fade-in">What is SDG 1?</h2>
+      <p class="section-desc fade-in">
+        SDG 1 aims to <strong>eradicate extreme poverty</strong> by 2030. Over 700 million people
+        survive on less than $2.15/day. Poverty means lack of food, shelter, education, and healthcare.
+      </p>
+      <div class="cards-row fade-in">
+        <div class="card">
+          <i class="fas fa-coins"></i>
+          <h3>Extreme Poverty</h3>
+          <p>700M+ people survive on less than $2.15 per day worldwide.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-house-crack"></i>
+          <h3>Hunger &amp; Homelessness</h3>
+          <p>Millions lack basic shelter, food, and clean drinking water.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-scale-balanced"></i>
+          <h3>Equal Opportunity</h3>
+          <p>Breaking poverty requires equal access to education and jobs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAUSES OF POVERTY ===== -->
+  <section id="causes" class="section causes">
+    <div class="container">
+      <h2 class="section-title fade-in">Causes of Poverty</h2>
+      <p class="section-desc fade-in">Click any card to learn more.</p>
+      <div class="causes-grid fade-in" id="causes-grid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTIONS ===== -->
+  <section id="solutions" class="section solutions">
+    <div class="container">
+      <h2 class="section-title fade-in">Solutions</h2>
+      <p class="section-desc fade-in">Together we can end poverty through these approaches.</p>
+      <div class="solutions-grid fade-in" id="solutions-grid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ ===== -->
+  <section id="quiz" class="section quiz">
+    <div class="container">
+      <h2 class="section-title fade-in">Quick Quiz</h2>
+      <p class="section-desc fade-in">Test your knowledge about global poverty!</p>
+      <div class="quiz-box fade-in" id="quiz-box">
+        <div class="quiz-progress"><div class="quiz-bar" id="quiz-bar"></div></div>
+        <p class="quiz-counter" id="quiz-counter"></p>
+        <h3 class="quiz-question" id="quiz-question"></h3>
+        <div class="quiz-options" id="quiz-options"></div>
+        <button class="btn quiz-next" id="quiz-next" disabled>Next →</button>
+      </div>
+      <!-- Result screen -->
+      <div class="quiz-result fade-in" id="quiz-result" style="display:none;">
+        <div class="result-emoji" id="result-emoji"></div>
+        <h3 id="result-title"></h3>
+        <p id="result-score"></p>
+        <button class="btn" id="quiz-restart">Try Again</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <div class="footer-brand">
+        <h3><i class="fas fa-hand-holding-heart"></i> Sustainify</h3>
+        <p>Raising awareness for SDG 1: No Poverty</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#causes">Causes</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#quiz">Quiz</a>
+      </div>
+      <div class="footer-external">
+        <a href="https://sdgs.un.org/goals/goal1" target="_blank" rel="noopener noreferrer" class="footer-btn">
+          Learn More About SDG 1 <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2025 Sustainify — Built by NAS</p>
+    <button class="back-top" id="back-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

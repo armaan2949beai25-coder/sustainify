@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUSTAINIFY | SDG 9 - Industry, Innovation & Infrastructure</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style9.css">
+</head>
+
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress-container">
+        <div id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <p>INITIALIZING SUSTAINIFY...</p>
+        </div>
+    </div>
+
+    <!-- Floating Background Particles -->
+    <div id="particles-container"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-microchip"></i></span>
+                Sustainify
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#infrastructure">Infrastructure</a></li>
+                <li><a href="#innovation">Innovation</a></li>
+                <li><a href="#smart-cities">Smart Cities</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-glass-card">
+                    <span class="sdg-badge">SDG 9</span>
+                    <div class="bg-number">9</div>
+                    <div class="hero-content">
+                        <h1>Industry, <span class="gradient-text">Innovation & Infrastructure</span></h1>
+                        <p id="hero-subtitle">Building resilient infrastructure and fostering sustainable innovation for
+                            the future.</p>
+                        <div class="hero-btns">
+                            <a href="#innovation" class="btn btn-primary">Explore Innovation</a>
+                            <a href="#vision" class="btn btn-outline">View Vision</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animated Circuit Lines (Visual Only) -->
+                <div class="circuit-decoration"></div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats-section">
+            <div class="container glass-container">
+                <div class="stats-grid">
+                    <div class="stat-card glass-card reveal">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="counter" data-target="95">0</h3>
+                        <span>Global Connectivity (%)</span>
+                    </div>
+                    <div class="stat-card glass-card reveal">
+                        <i class="fas fa-chart-line"></i>
+                        <h3 class="counter" data-target="12">0</h3>
+                        <span>Innovation Growth (%)</span>
+                    </div>
+                    <div class="stat-card glass-card reveal">
+                        <i class="fas fa-city"></i>
+                        <h3 class="counter" data-target="450">0</h3>
+                        <span>Smart City Projects</span>
+                    </div>
+                    <div class="stat-card glass-card reveal">
+                        <i class="fas fa-leaf"></i>
+                        <h3 class="counter" data-target="82">0</h3>
+                        <span>Sustainable Infrastructure (%)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infrastructure Section -->
+        <section id="infrastructure" class="infrastructure-section section-padding">
+            <div class="container glass-container">
+                <div class="section-header reveal">
+                    <h2>Advanced <span class="gradient-text">Infrastructure</span></h2>
+                    <p>Laying the foundation for a connected and resilient global economy.</p>
+                </div>
+                <div class="infrastructure-grid">
+                    <!-- Cards will be styled in CSS, structure here -->
+                    <div class="infra-card glass-card reveal">
+                        <div class="card-icon"><i class="fas fa-train-subway"></i></div>
+                        <h3>Smart Transportation</h3>
+                        <p>Next-gen transit systems powered by AI for efficient urban mobility.</p>
+                    </div>
+                    <div class="infra-card glass-card reveal">
+                        <div class="card-icon"><i class="fas fa-industry"></i></div>
+                        <h3>Sustainable Industries</h3>
+                        <p>Eco-friendly manufacturing processes reducing carbon footprint.</p>
+                    </div>
+                    <div class="infra-card glass-card reveal">
+                        <div class="card-icon"><i class="fas fa-wifi"></i></div>
+                        <h3>Digital Connectivity</h3>
+                        <p>Universal high-speed internet access for remote and urban areas.</p>
+                    </div>
+                    <div class="infra-card glass-card reveal">
+                        <div class="card-icon"><i class="fas fa-solar-panel"></i></div>
+                        <h3>Green Infrastructure</h3>
+                        <p>Renewable energy grids integrated into city development.</p>
+                    </div>
+                    <div class="infra-card glass-card reveal">
+                        <div class="card-icon"><i class="fas fa-robot"></i></div>
+                        <h3>Advanced Manufacturing</h3>
+                        <p>Automated production lines utilizing robotics and IoT.</p>
+                    </div>
+                    <div class="infra-card glass-card reveal">
+                        <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3>Intelligent Networks</h3>
+                        <p>Self-healing data networks for uninterrupted global commerce.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation Showcase Section -->
+        <section id="innovation" class="innovation-section section-padding">
+            <div class="container glass-container">
+                <div class="section-header reveal">
+                    <h2>Innovation <span class="gradient-text">Showcase</span></h2>
+                    <p>Exploring the frontiers of technology and human ingenuity.</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="filter-controls reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai">AI & Robotics</button>
+                    <button class="filter-btn" data-filter="energy">Green Tech</button>
+                    <button class="filter-btn" data-filter="digital">Digital</button>
+                    <div class="sort-wrapper">
+                        <label for="sort-innovation">Sort by:</label>
+                        <select id="sort-innovation">
+                            <option value="name">Name</option>
+                            <option value="relevance">Relevance</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="innovation-grid" class="innovation-grid">
+                    <!-- Dynamically rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Cities Section -->
+        <section id="smart-cities" class="smart-cities-section section-padding">
+            <div class="container glass-container">
+                <div class="section-header reveal">
+                    <h2>Smart <span class="gradient-text">Cities</span></h2>
+                    <p>The evolution of urban living through integrated technology.</p>
+                </div>
+
+                <div class="timeline-container reveal">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>Intelligent Transport</h3>
+                            <p>Real-time traffic management and autonomous public transit integration.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>IoT Infrastructure</h3>
+                            <p>Connected sensors monitoring air quality, waste, and energy usage.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>Green Urban Planning</h3>
+                            <p>Vertical forests and sustainable materials in modern architecture.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>Connected Systems</h3>
+                            <p>Unified digital governance and citizen interaction platforms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="technology" class="technology-section section-padding">
+            <div class="container glass-container">
+                <div class="section-header reveal">
+                    <h2>Core <span class="gradient-text">Technologies</span></h2>
+                    <p>Empowering the next generation of industrial revolution.</p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-card glass-card reveal">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud Computing</h3>
+                        <p>Scalable infrastructure for global data storage and processing.</p>
+                    </div>
+                    <div class="tech-card glass-card reveal">
+                        <i class="fas fa-shield-halved"></i>
+                        <h3>Cybersecurity</h3>
+                        <p>Protecting critical infrastructure from digital threats.</p>
+                    </div>
+                    <div class="tech-card glass-card reveal">
+                        <i class="fas fa-link"></i>
+                        <h3>Blockchain</h3>
+                        <p>Transparent and secure supply chain management.</p>
+                    </div>
+                    <div class="tech-card glass-card reveal">
+                        <i class="fas fa-signal"></i>
+                        <h3>5G Networks</h3>
+                        <p>Ultra-fast connectivity for real-time industrial IoT.</p>
+                    </div>
+                    <div class="tech-card glass-card reveal">
+                        <i class="fas fa-gears"></i>
+                        <h3>Automation</h3>
+                        <p>Increasing efficiency through intelligent machine control.</p>
+                    </div>
+                    <div class="tech-card glass-card reveal">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Digital Innovation</h3>
+                        <p>Transforming traditional industries into smart enterprises.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section id="vision" class="vision-section section-padding">
+            <div class="container glass-container">
+                <div class="section-header reveal">
+                    <h2>Future <span class="gradient-text">Vision</span></h2>
+                    <p>A roadmap towards a sustainable and innovative tomorrow.</p>
+                </div>
+
+                <div class="vision-intro reveal">
+                    SDG 9 envisions a world where resilient infrastructure, inclusive industrialization, and
+                    breakthrough innovation converge to create equitable prosperity. Our roadmap outlines the
+                    critical milestones—from laying the digital foundation to achieving fully autonomous,
+                    carbon-neutral industrial ecosystems by 2035.
+                </div>
+
+                <div class="roadmap-container reveal">
+                    <div class="roadmap-line"></div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">2026</div>
+                        <div class="roadmap-content glass-card">
+                            <h3><i class="fas fa-signal"></i> Digital Foundation</h3>
+                            <p>Global 5G deployment reaches 85% urban coverage. Smart city pilot programs launch in 50+
+                                metropolises. IoT sensor networks establish baseline data for infrastructure monitoring.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">2028</div>
+                        <div class="roadmap-content glass-card">
+                            <h3><i class="fas fa-brain"></i> AI Integration</h3>
+                            <p>AI-driven resource optimization becomes industry standard across manufacturing,
+                                logistics, and urban planning. Predictive maintenance reduces infrastructure downtime by
+                                60%.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">2030</div>
+                        <div class="roadmap-content glass-card">
+                            <h3><i class="fas fa-leaf"></i> Carbon-Neutral Industries</h3>
+                            <p>80% of major industrial hubs achieve carbon neutrality. Green hydrogen powers heavy
+                                industry. Circular economy models eliminate 70% of industrial waste.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">2033</div>
+                        <div class="roadmap-content glass-card">
+                            <h3><i class="fas fa-city"></i> Autonomous Infrastructure</h3>
+                            <p>Self-managing infrastructure networks handle traffic, energy distribution, and
+                                maintenance with minimal human intervention. Digital twins simulate and optimize entire
+                                cities in real time.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">2035</div>
+                        <div class="roadmap-content glass-card">
+                            <h3><i class="fas fa-rocket"></i> Global Innovation Parity</h3>
+                            <p>Developing nations gain equal access to advanced infrastructure through satellite
+                                internet, modular construction, and open-source industrial automation—closing the global
+                                innovation gap.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fas fa-industry"></i></span>
+                    Sustainify
+                </a>
+                <p class="tagline">Connecting innovation, infrastructure, and intelligent industries for a resilient
+                    digital future.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="https://sdgs.un.org/goals/goal9" target="_blank">United Nations SDG 9</a>
+                    <a href="https://www.weforum.org/" target="_blank">World Economic Forum</a>
+                    <a href="https://www.ieee.org/" target="_blank">IEEE Technology</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sustainify &mdash; Built by NAS</p>
+        </div>
+    </footer>
+
+    <!-- UI Elements -->
+    <button id="back-to-top" class="fab" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+
+    <!-- Scripts -->
+    <script src="script9.js"></script>
+</body>
+
+</html>

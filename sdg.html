@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore SDGs - UN Goals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="sdg-page">
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-brand">
+            <i class="fa-solid fa-globe"></i> SDGs Hub
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sdg.html" class="active">Explore Goals</a></li>
+            <li><a href="official.html">Official Site</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="explorer-header fade-in">
+        <h1>Discover the 17 Goals</h1>
+        <p>Click on any card to learn more about the specific Sustainable Development Goal.</p>
+        
+        <!-- Search and Filters -->
+        <div class="filters">
+            <input type="text" id="search-sdg" placeholder="Search goals by keyword...">
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Goals</button>
+            <button class="filter-btn" data-filter="people">People</button>
+            <button class="filter-btn" data-filter="planet">Planet</button>
+            <button class="filter-btn" data-filter="prosperity">Prosperity</button>
+            <button class="filter-btn" data-filter="peace">Peace</button>
+            <button class="filter-btn" data-filter="partnership">Partnership</button>
+        </div>
+    </div>
+
+    <!-- SDG Grid (Rendered via JS) -->
+    <main id="sdg-grid" class="sdg-grid">
+        <!-- Cards injected by script.js -->
+    </main>
+
+    <!-- Modal Overlay -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content glass-container">
+            <button id="close-modal" class="close-modal"><i class="fa-solid fa-times"></i></button>
+            <div id="modal-details">
+                <!-- Details injected by script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SDGs Interactive Hub.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

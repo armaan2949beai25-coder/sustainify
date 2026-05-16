@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainify - Global SDG Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-brand">
+            <i class="fa-solid fa-earth-americas"></i> SUSTAINIFY
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About SDGs</a></li>
+            <li><a href="#explore">Explore Goals</a></li>
+            <li><a href="#impact">Global Impact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-outline" style="padding: 0.5rem 1.5rem; border-radius: 20px;">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-floating-icon">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <h1>Building a Sustainable Future Together</h1>
+            <p>Welcome to the central platform connecting all 17 United Nations Sustainable Development Goals. Discover global initiatives, explore data, and join the movement to transform our world by 2030.</p>
+            <div class="hero-actions">
+                <a href="#explore" class="btn btn-primary">Explore the 17 SDGs</a>
+                <a href="#about" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- About SDGs Section -->
+    <section id="about" class="reveal">
+        <div class="section-header">
+            <h2>What are the SDGs?</h2>
+            <p>The Sustainable Development Goals are a universal call to action to end poverty, protect the planet, and ensure that by 2030 all people enjoy peace and prosperity.</p>
+        </div>
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fa-solid fa-handshake-angle info-icon"></i>
+                <h3>Global Partnership</h3>
+                <p>193 Member States committed to this shared blueprint for peace and prosperity for people and the planet.</p>
+            </div>
+            <div class="info-card">
+                <i class="fa-solid fa-seedling info-icon"></i>
+                <h3>Comprehensive Action</h3>
+                <p>17 integrated goals recognizing that action in one area will affect outcomes in others.</p>
+            </div>
+            <div class="info-card">
+                <i class="fa-solid fa-chart-line info-icon"></i>
+                <h3>Measurable Targets</h3>
+                <p>169 targets to track progress and ensure no one is left behind in the journey to 2030.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Impact Section -->
+    <section id="impact" class="reveal">
+        <div class="section-header">
+            <h2>Driving Global Impact</h2>
+            <p>Sustainability is not just a goal; it's an ecosystem of continuous innovation and global collaboration.</p>
+        </div>
+        <div class="info-grid">
+            <div class="info-card" style="padding: 4rem 2rem;">
+                <h3 style="font-size: 3.5rem; color: #2563eb; margin-bottom: 0;">193</h3>
+                <p style="font-weight: 600; font-size: 1.1rem;">Nations United</p>
+            </div>
+            <div class="info-card" style="padding: 4rem 2rem;">
+                <h3 style="font-size: 3.5rem; color: #10b981; margin-bottom: 0;">2030</h3>
+                <p style="font-weight: 600; font-size: 1.1rem;">Target Year</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SDG Showcase Grid -->
+    <section id="explore" class="reveal">
+        <div class="section-header">
+            <h2>Explore the 17 Goals</h2>
+            <p>Click on any goal to access its dedicated digital platform and discover how you can contribute.</p>
+        </div>
+        <div id="sdg-grid" class="sdg-grid">
+            <!-- Cards injected dynamically via script.js -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="premium-footer reveal">
+        <div class="footer-content">
+            <!-- Left: Branding -->
+            <div class="footer-brand">
+                <h2><i class="fa-solid fa-earth-americas"></i> SUSTAINIFY</h2>
+                <p>Connecting the world through the Sustainable Development Goals.</p>
+            </div>
+            
+            <!-- Center: Copyright -->
+            <div class="footer-copyright">
+                &copy; 2026 Sustainify — Global SDG Platform
+                <br>
+                <span style="display: inline-block; margin-top: 8px; font-weight: 600; letter-spacing: 1px; color: #475569;">BUILT BY NAS 🚀</span>
+            </div>
+
+            <!-- Right: External Resources -->
+            <div class="footer-resources">
+                <h4>External Resources</h4>
+                <ul>
+                    <li><a href="https://sdgs.un.org/goals" target="_blank">United Nations SDGs</a></li>
+                    <li><a href="https://www.undp.org/" target="_blank">UN Development Programme</a></li>
+                    <li><a href="https://sustainabledevelopment.un.org/" target="_blank">UN Sustainable Development</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

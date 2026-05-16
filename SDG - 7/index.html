@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainify — Affordable & Clean Energy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style7.css">
+</head>
+
+<body>
+
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollBar"></div>
+    </div>
+
+    <div id="particles-container"></div>
+
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" width="28" height="28" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="energyGrad" x1="2" y1="16" x2="30" y2="16" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#ffb300" />
+                            <stop offset="100%" stop-color="#4caf50" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M16 2L4 18h9v12l15-18h-9L16 2z" fill="url(#energyGrad)" opacity="0.9" />
+                </svg>
+                Sustainify
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tips">Energy Tips</a></li>
+                <li><a href="#sources">Energy Sources</a></li>
+                <li><a href="#stats">Global Stats</a></li>
+                <li><a href="#action">Action</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <span class="icon-sun">☀️</span>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section id="hero" class="hero section reveal">
+            <div class="container">
+                <div class="glass-panel hero-panel">
+                    <div class="sdg-bg-number">7</div>
+                    <div class="hero-content">
+                        <span class="hero-badge">United Nations Sustainable Development Goal 7</span>
+                        <h1 class="hero-title">Affordable &amp; <span class="gradient-text">Clean Energy</span></h1>
+                        <p class="hero-subtitle type-effect">Ensure access to affordable, reliable, sustainable and
+                            modern energy for all.</p>
+
+                        <div class="hero-actions">
+                            <a href="#about" class="btn btn-primary ripple">Learn More</a>
+                            <a href="#action" class="btn btn-outline ripple">Take Action</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-stats-card">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="675">0</span><span class="stat-suffix">M</span>
+                            <span class="stat-label">Lack electricity access</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2.3">0</span><span class="stat-suffix">B</span>
+                            <span class="stat-label">Rely on unsafe cooking fuels</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="91">0</span><span class="stat-suffix">%</span>
+                            <span class="stat-label">Global electricity access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Overview</span>
+                    <h2 class="section-title">Why Clean Energy Matters</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card glow-top">
+                        <div class="about-icon">⚡</div>
+                        <h3>Universal Access</h3>
+                        <p>Electricity is crucial for daily life, healthcare, and education. We must ensure universal
+                            access to affordable power.</p>
+                    </div>
+                    <div class="about-card glow-top">
+                        <div class="about-icon">🌱</div>
+                        <h3>Renewable Power</h3>
+                        <p>Transitioning from fossil fuels to renewable energy drastically reduces greenhouse gas
+                            emissions.</p>
+                    </div>
+                    <div class="about-card glow-top">
+                        <div class="about-icon">☀️</div>
+                        <h3>Solar Revolution</h3>
+                        <p>Harnessing the power of the sun provides a limitless, clean source of energy for communities
+                            worldwide.</p>
+                    </div>
+                    <div class="about-card glow-top">
+                        <div class="about-icon">🌬️</div>
+                        <h3>Wind Energy</h3>
+                        <p>Wind turbines capture natural kinetic energy, producing electricity without pollution or
+                            water usage.</p>
+                    </div>
+                    <div class="about-card glow-top">
+                        <div class="about-icon">💡</div>
+                        <h3>Energy Efficiency</h3>
+                        <p>Improving energy efficiency reduces overall demand and saves resources without sacrificing
+                            modern comforts.</p>
+                    </div>
+                    <div class="about-card glow-top">
+                        <div class="about-icon">🌍</div>
+                        <h3>Climate Action</h3>
+                        <p>Clean energy is the most vital step in combating global climate change and protecting our
+                            future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="section reveal">
+            <div class="container glass-panel">
+                <div class="section-header center">
+                    <span class="section-tag">Take Action</span>
+                    <h2 class="section-title">Energy Saving Tips</h2>
+                </div>
+
+                <div class="tips-controls">
+                    <input type="text" id="tips-search" placeholder="Search tips..."
+                        class="form-control glass-input">
+                    <select id="tips-sort" class="form-control glass-input">
+                        <option value="all">All Categories</option>
+                        <option value="Appliance">Appliances</option>
+                        <option value="Lighting">Lighting</option>
+                        <option value="Heating/Cooling">HVAC</option>
+                    </select>
+                </div>
+
+                <div id="tips-container" class="tips-grid">
+
+                </div>
+            </div>
+        </section>
+
+        <section id="sources" class="section reveal">
+            <div class="container glass-panel">
+                <div class="section-header center">
+                    <span class="section-tag">Education</span>
+                    <h2 class="section-title">Clean Energy Sources</h2>
+                </div>
+                <div class="sources-grid">
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glow-border">
+                                <div class="source-icon">☀️</div>
+                                <h3>Solar</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Solar Power</h3>
+                                <p>Converts sunlight into electricity using photovoltaic cells. Abundant and
+                                    increasingly affordable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glow-border">
+                                <div class="source-icon">🌬️</div>
+                                <h3>Wind</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Wind Power</h3>
+                                <p>Uses large turbines to convert wind's kinetic energy into electrical power
+                                    without
+                                    emissions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glow-border">
+                                <div class="source-icon">🌊</div>
+                                <h3>Hydropower</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Hydropower</h3>
+                                <p>Generates electricity from the movement of water, usually via dams. A highly
+                                    reliable
+                                    base-load source.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glow-border">
+                                <div class="source-icon">🌋</div>
+                                <h3>Geothermal</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Geothermal</h3>
+                                <p>Taps into heat trapped beneath the Earth's surface for continuous,
+                                    weather-independent energy.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glow-border">
+                                <div class="source-icon">🌿</div>
+                                <h3>Biomass</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Biomass</h3>
+                                <p>Energy derived from organic materials. Can be sustainable if managed correctly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glow-border">
+                                <div class="source-icon">⚛️</div>
+                                <h3>Nuclear</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Nuclear</h3>
+                                <p>Produces massive amounts of low-carbon electricity, though waste management
+                                    remains a
+                                    challenge.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="section reveal">
+            <div class="container glass-panel">
+                <div class="section-header center">
+                    <span class="section-tag">Global Perspective</span>
+                    <h2 class="section-title">World Energy Progress</h2>
+                </div>
+                <div class="progress-stats-container">
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span>Renewable Electricity Share</span>
+                            <span class="progress-val">30%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-width="30%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span>Global Electricity Access</span>
+                            <span class="progress-val">91%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-width="91%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span>Clean Cooking Access</span>
+                            <span class="progress-val">71%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-width="71%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="compounding-stat mt-4 text-center">
+                    <p class="small text-muted">Simulated projected carbon reduction over 10 years:</p>
+                    <h3 id="recursive-result" class="gradient-text">Calculating...</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="action" class="section reveal">
+            <div class="container">
+                <div class="glass-panel contact-panel">
+                    <div class="section-header center">
+                        <span class="section-tag">Commitment</span>
+                        <h2 class="section-title">Take the Clean Energy Pledge</h2>
+                        <p class="section-desc">Join the global movement towards a sustainable future.</p>
+                    </div>
+
+                    <form id="pledge-form" class="pledge-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control glass-input" required>
+                            <span class="error-msg" id="name-error">Name is required</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control glass-input" required>
+                            <span class="error-msg" id="email-error">Valid email is required</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" class="form-control glass-input" required>
+                                <option value="">Select a country...</option>
+                                <option value="US">United States</option>
+                                <option value="IN">India</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Why is clean energy important to you?</label>
+                            <textarea id="message" name="message" rows="4" class="form-control glass-input"></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="pledge" name="pledge" required>
+                            <label for="pledge">I pledge to reduce my energy consumption and support clean energy
+                                initiatives.</label>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn btn-primary ripple w-100 mt-4">
+                            <span class="btn-text">Submit Pledge</span>
+                            <span class="loader hidden"></span>
+                        </button>
+
+                        <div id="form-success" class="alert-success hidden">
+                            Thank you for your pledge! Together we can achieve SDG 7.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="container footer-grid">
+            <div class="footer-col branding">
+                <a href="#" class="footer-logo">
+                    <span class="icon">⚡</span>
+                    Sustainify
+                </a>
+                <p class="tagline">Powering a cleaner, greener, and sustainable tomorrow through affordable clean
+                    energy.</p>
+            </div>
+
+            <div class="footer-col copyright">
+                <p>&copy; 2026 Sustainify &mdash; Built by NAS</p>
+            </div>
+
+            <div class="footer-col links">
+                <h4>External Resources</h4>
+                <ul>
+                    <li><a href="#" target="_blank">United Nations SDG 7</a></li>
+                    <li><a href="#" target="_blank">UN Sustainable Development Goals</a></li>
+                    <li><a href="#" target="_blank">International Energy Agency</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Scroll to top">↑</button>
+
+    <div id="page-loader" class="page-loader">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script7.js"></script>
+</body>
+
+</html>

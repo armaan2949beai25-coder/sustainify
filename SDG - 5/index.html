@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 5 - Gender Equality | Sustainify</title>
+    <meta name="description" content="Sustainify's interactive platform for SDG 5 - Gender Equality. Empowering every voice through awareness and equal opportunities.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollBar"></div>
+    </div>
+
+    <!-- Background overlay (light overlay to ensure readability) -->
+    <div class="background-overlay"></div>
+
+    <!-- Floating Glassmorphism Navbar -->
+    <nav class="glass-navbar">
+        <div class="nav-left">
+            <span class="nav-icon">⚧</span>
+            <span class="nav-brand">Sustainify</span>
+        </div>
+        <div class="nav-center">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#pillars">Equality Areas</a>
+            <a href="#impact">Impact</a>
+            <a href="#actions">Stories</a>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="cta-btn btn-glass">Explore SDGs</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="glass-container hero-content">
+            <h1 class="hero-title"><span class="icon-accent">⚧</span>SDG 5 – Gender Equality</h1>
+            <p class="hero-tagline">Equal Rights, Equal Future</p>
+            <p class="hero-subtitle">Empowering every voice, ending discrimination, and building a world where opportunity knows no gender.</p>
+            <a href="#about" class="cta-btn primary-btn">Join the Movement</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="glass-container compact-container">
+            <h2>Understanding SDG 5</h2>
+            <div class="icon-cards">
+                <div class="icon-card glass-panel">
+                    <div class="card-icon">👩‍🎓</div>
+                    <h3>Empowerment</h3>
+                    <p>Ensuring women and girls have equal access to education and leadership.</p>
+                </div>
+                <div class="icon-card glass-panel">
+                    <div class="card-icon">⚖️</div>
+                    <h3>Equal Rights</h3>
+                    <p>Ending all forms of discrimination and promoting equal opportunities.</p>
+                </div>
+                <div class="icon-card glass-panel">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Safe Environments</h3>
+                    <p>Eliminating violence and creating safe spaces for everyone globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Unique Section - Equality Pillars (Layered Circular Layout) -->
+    <section id="pillars" class="pillars-section">
+        <div class="glass-container transparent-container">
+            <h2>The Pillars of Equality</h2>
+            <div class="circular-layout">
+                <div class="circle-card glass-panel">
+                    <span class="circle-icon">📚</span>
+                    <h4>Equal Education</h4>
+                </div>
+                <div class="circle-card glass-panel">
+                    <span class="circle-icon">💼</span>
+                    <h4>Workplace Equality</h4>
+                </div>
+                <div class="circle-card glass-panel center-circle">
+                    <span class="circle-icon">⚧</span>
+                    <h4>SDG 5 Focus</h4>
+                </div>
+                <div class="circle-card glass-panel">
+                    <span class="circle-icon">💰</span>
+                    <h4>Equal Pay</h4>
+                </div>
+                <div class="circle-card glass-panel">
+                    <span class="circle-icon">👑</span>
+                    <h4>Leadership</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats Section -->
+    <section id="impact" class="impact-section">
+        <div class="glass-container compact-container flex-stats">
+            <div class="stat-item glass-panel">
+                <div class="stat-circle">
+                    <span class="counter" data-target="100">0</span>%
+                </div>
+                <p>Goal: Equal Opportunity</p>
+            </div>
+            <div class="stat-item glass-panel">
+                <div class="stat-circle">
+                    <span class="counter" data-target="30">0</span>%
+                </div>
+                <p>Current Women in Parliaments</p>
+            </div>
+            <div class="stat-item glass-panel">
+                <div class="stat-circle">
+                    <span class="counter" data-target="50">0</span>%
+                </div>
+                <p>Target Parity</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Feature: Equality Awareness Quiz -->
+    <section id="quiz" class="quiz-section">
+        <div class="glass-container compact-container">
+            <h2>Equality Awareness Quiz</h2>
+            <div id="quiz-container" class="glass-panel inner-panel">
+                <div id="question-text" class="question-text">Loading question...</div>
+                <div id="options-container" class="options-container">
+                    <!-- Options injected by JS -->
+                </div>
+                <div id="quiz-result" class="quiz-result hidden">
+                    <h3 id="result-message"></h3>
+                    <button id="retry-btn" class="cta-btn btn-glass hidden">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awareness / Daily Actions Section -->
+    <section id="actions" class="actions-section">
+        <div class="glass-container transparent-container">
+            <h2>Daily Empowerment Actions</h2>
+            <div class="staggered-layout">
+                <div class="mini-card glass-panel">
+                    <span class="mini-icon">🗣️</span>
+                    <p>Amplify underrepresented voices in meetings.</p>
+                </div>
+                <div class="mini-card glass-panel">
+                    <span class="mini-icon">🤝</span>
+                    <p>Challenge gender stereotypes in daily conversations.</p>
+                </div>
+                <div class="mini-card glass-panel">
+                    <span class="mini-icon">📖</span>
+                    <p>Educate others on the importance of equal pay.</p>
+                </div>
+                <div class="mini-card glass-panel">
+                    <span class="mini-icon">💪</span>
+                    <p>Support businesses led by women.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-logo">⚧</span>
+                <span class="footer-brand">Sustainify</span>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#pillars">Equality</a>
+                </div>
+                <p class="copyright">© 2026 Sustainify. All rights reserved.</p>
+                <p class="built-by">Built by NAS</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.unwomen.org/" target="_blank" class="cta-btn btn-glass">UN Women</a>
+                <a href="#hero" class="back-to-top" aria-label="Back to top">↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
