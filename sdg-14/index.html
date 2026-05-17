@@ -170,6 +170,191 @@
             </div>
         </section>
 
+        <!-- 1. Marine Species Showcase -->
+        <section id="species" class="section-container">
+            <div class="section-header">
+                <h2>Marine Species Showcase</h2>
+                <p>Discover the diverse life forms that call our oceans home.</p>
+            </div>
+            <div class="horizontal-scroll-wrapper">
+                <div class="horizontal-scroll">
+                    <div class="species-card premium-card hover-glow">
+                        <div class="species-icon">🐢</div>
+                        <h4>Sea Turtles</h4>
+                        <p>Ancient mariners vital to marine ecosystems.</p>
+                    </div>
+                    <div class="species-card premium-card hover-glow">
+                        <div class="species-icon">🐬</div>
+                        <h4>Dolphins</h4>
+                        <p>Highly intelligent and social marine mammals.</p>
+                    </div>
+                    <div class="species-card premium-card hover-glow">
+                        <div class="species-icon">🪸</div>
+                        <h4>Coral Reefs</h4>
+                        <p>The rainforests of the sea, supporting vast biodiversity.</p>
+                    </div>
+                    <div class="species-card premium-card hover-glow">
+                        <div class="species-icon">🐋</div>
+                        <h4>Whales</h4>
+                        <p>Gentle giants that help regulate the ocean's food chain.</p>
+                    </div>
+                    <div class="species-card premium-card hover-glow">
+                        <div class="species-icon">🦈</div>
+                        <h4>Sharks</h4>
+                        <p>Apex predators crucial for maintaining reef health.</p>
+                    </div>
+                    <div class="species-card premium-card hover-glow">
+                        <div class="species-icon">🪼</div>
+                        <h4>Jellyfish</h4>
+                        <p>Fascinating creatures made of 95% water.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Ocean Facts Counter Section -->
+        <section id="facts-counter" class="section-container alternate-layout">
+            <div class="section-header">
+                <h2>Ocean by the Numbers</h2>
+                <p>Understanding the scale of our marine world.</p>
+            </div>
+            <div class="counter-grid">
+                <div class="counter-card premium-card">
+                    <h3 class="counter" data-target="71">0</h3><span>%</span>
+                    <p>Of Earth covered by oceans</p>
+                </div>
+                <div class="counter-card premium-card">
+                    <h3 class="counter" data-target="230000">0</h3><span>+</span>
+                    <p>Known marine species</p>
+                </div>
+                <div class="counter-card premium-card">
+                    <h3 class="counter" data-target="14">0</h3><span>M</span>
+                    <p>Tons of plastic entering yearly</p>
+                </div>
+                <div class="counter-card premium-card">
+                    <h3 class="counter" data-target="50">0</h3><span>%</span>
+                    <p>Coral reefs endangered</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. SDG 14 Targets Timeline -->
+        <section id="timeline" class="section-container alternate-layout">
+            <div class="section-header">
+                <h2>SDG 14 Targets Timeline</h2>
+                <p>Key goals to achieve a sustainable future for our oceans.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon">🚫</div>
+                    <div class="timeline-content premium-card">
+                        <h4>Reduce Marine Pollution</h4>
+                        <p>Prevent and significantly reduce marine pollution of all kinds, in particular from land-based activities.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon">🛡️</div>
+                    <div class="timeline-content premium-card">
+                        <h4>Protect Ecosystems</h4>
+                        <p>Sustainably manage and protect marine and coastal ecosystems to avoid significant adverse impacts.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon">🎣</div>
+                    <div class="timeline-content premium-card">
+                        <h4>End Overfishing</h4>
+                        <p>Effectively regulate harvesting and end overfishing, illegal, unreported and unregulated fishing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon">🌊</div>
+                    <div class="timeline-content premium-card">
+                        <h4>Conserve Coastal Areas</h4>
+                        <p>Conserve at least 10 per cent of coastal and marine areas, consistent with national and international law.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Ocean Pollution Comparison Section -->
+        <section id="comparison" class="section-container">
+            <div class="section-header">
+                <h2>The Impact of Pollution</h2>
+                <p>See the difference between a polluted and clean ocean.</p>
+            </div>
+            <div class="comparison-slider-container premium-card">
+                <div class="comparison-slider">
+                    <div class="img-background after-image">
+                        <span>Clean Ocean</span>
+                    </div>
+                    <div class="img-foreground before-image" id="before-image">
+                        <span>Polluted Ocean</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="compare-slider">
+                    <div class="slider-button" id="slider-button"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Marine Quiz Section -->
+        <section id="marine-quiz" class="section-container form-section alternate-layout">
+            <div class="form-wrapper premium-card">
+                <div class="section-header">
+                    <h2>Marine Knowledge Quiz</h2>
+                    <p>Test your understanding of life below water.</p>
+                </div>
+                <div id="new-quiz-container">
+                    <div class="question-block">
+                        <p id="new-question-text" class="question-title">Loading question...</p>
+                        <div class="options-grid" id="new-options-container"></div>
+                    </div>
+                    <div class="feedback-area">
+                        <p id="new-quiz-feedback" class="feedback"></p>
+                    </div>
+                    <div class="action-area">
+                        <button id="new-next-btn" class="btn hidden">Next Question</button>
+                    </div>
+                </div>
+                <div id="new-quiz-results" class="results-block hidden">
+                    <h3 id="new-score-text"></h3>
+                    <p class="results-insight">Every bit of knowledge helps protect our oceans!</p>
+                    <button id="new-restart-btn" class="btn">Restart Quiz</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 8. "How You Can Help" Section -->
+        <section id="how-to-help" class="section-container alternate-layout">
+            <div class="section-header">
+                <h2>How You Can Help</h2>
+                <p>Small actions can make a massive difference.</p>
+            </div>
+            <div class="help-grid">
+                <div class="help-card premium-card hover-glow">
+                    <div class="help-icon">🥤</div>
+                    <h4>Avoid Single-Use Plastic</h4>
+                    <p>Use reusable bags, bottles, and straws to reduce plastic waste.</p>
+                </div>
+                <div class="help-card premium-card hover-glow">
+                    <div class="help-icon">🏖️</div>
+                    <h4>Beach Cleanups</h4>
+                    <p>Join or organize local cleanups to keep our shores pristine.</p>
+                </div>
+                <div class="help-card premium-card hover-glow">
+                    <div class="help-icon">🐟</div>
+                    <h4>Sustainable Seafood</h4>
+                    <p>Choose seafood that is sourced responsibly and sustainably.</p>
+                </div>
+                <div class="help-card premium-card hover-glow">
+                    <div class="help-icon">💧</div>
+                    <h4>Save Water</h4>
+                    <p>Conserve water at home to reduce runoff and wastewater flowing into oceans.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Premium Footer -->

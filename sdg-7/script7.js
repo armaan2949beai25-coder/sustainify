@@ -43,14 +43,8 @@ const tipsJSON = JSON.stringify(energyTips);
 const parsedTips = JSON.parse(tipsJSON);
 const shallowCopy = energyTips; // Points to same memory
 const deepCopyAppliance = JSON.parse(JSON.stringify(appliances.ac)); // True independent copy
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        if(DOM.loader) {
-            DOM.loader.style.opacity = '0';
-            setTimeout(() => DOM.loader.style.display = 'none', 500);
-        }
-        initApp();
-    }, 1000); // Artificial delay to show loader
+window.addEventListener('DOMContentLoaded', () => {
+    initApp();
 });
 
 function initApp() {

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // 2. DOM ELEMENTS
-    const loader = document.getElementById('loader');
+
     const scrollBar = document.getElementById('scroll-progress-bar');
     const navbar = document.getElementById('navbar');
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -28,13 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sortSelect = document.getElementById('sort-innovation');
 
 
-    // 3. LOADER & ASYNC INITIALIZATION
+    // 3. ASYNC INITIALIZATION
     const initializeApp = async () => {
         try {
-            // Simulate data fetching or resource loading
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            loader.style.opacity = '0';
-            setTimeout(() => loader.style.display = 'none', 500);
             renderInnovations(innovations);
             startTypingEffect();
         } catch (error) {
@@ -68,6 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // Scroll Reveal Logic
             if (winScroll > sectionTop - window.innerHeight + 100) {
+                // Reveal the section itself if it has the reveal class
+                if (section.classList.contains('reveal')) {
+                    section.classList.add('active');
+                }
                 section.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
                 // Trigger counters if in stats section
                 if (section.id === 'stats') startCounters();

@@ -30,15 +30,9 @@ const UI = {
 };
 
 // --- 3. INITIALIZATION ---
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        UI.preloader.style.opacity = "0";
-        setTimeout(() => {
-            UI.preloader.style.display = "none";
-            appState.isLoaded = true;
-            initApp();
-        }, 500);
-    }, 1000);
+window.addEventListener("DOMContentLoaded", () => {
+    appState.isLoaded = true;
+    initApp();
 });
 
 const initApp = () => {

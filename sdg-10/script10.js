@@ -290,10 +290,10 @@ function initRevealAnimations() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
                 // Progress bar impact section special handling
-                const prog = entry.target.querySelector('.impact-progress');
-                if (prog) {
+                const progs = entry.target.querySelectorAll('.impact-progress');
+                progs.forEach(prog => {
                     prog.style.width = prog.getAttribute('data-width');
-                }
+                });
             }
         });
     }, options);
