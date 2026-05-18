@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>document.documentElement.style.display = 'none';</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainify - Reduced Inequalities</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <!-- Enforce authentication -->
+  <script type="module" crossorigin src="/sustainify/assets/authCheck-G7OA-1QA.js"></script>
+  <link rel="stylesheet" crossorigin href="/sustainify/assets/sdg-10-BPn_gY1R.css">
+</head>
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="scroll-bar"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div id="preloader" class="flex-center flex-col" style="position:fixed; inset:0; background:#fff; z-index:10000; transition:opacity 0.5s;">
+        <div class="loader" style="width:60px; height:60px; border:5px solid #f3f3f3; border-top:5px solid var(--primary); border-radius:50%; animation:spin 1s linear infinite;"></div>
+        <h2 class="gradient-text mt-2" style="margin-top:20px; font-family:var(--font-heading);">Sustainify</h2>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar flex-between" id="navbar">
+        <a href="#home" class="nav-logo">
+            <img src="/sustainify/assets/sdg10_logo-C8NBaW7B.png" alt="SDG 10 Logo" class="logo-img">
+            <span>Sustainify</span>
+        </a>
+        <button class="hamburger" id="nav-toggle"><i class="fas fa-bars"></i></button>
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#equality">Equality</a></li>
+                <li><a href="#voices">Voices</a></li>
+                <li><a href="#impact">Global Impact</a></li>
+                <li><a href="#communities">Communities</a></li>
+                <li><a href="#action">Action</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero flex-center">
+            <div class="hero-container glass-card reveal">
+                <span class="badge">SDG 10</span>
+                <span class="bg-num">10</span>
+                <h1 class="title">Reduced <br><span class="gradient-text" id="typing-text">Inequalities</span></h1>
+                <p class="subtitle">Building a world where every voice matters, every opportunity is equal, and every community thrives together.</p>
+                
+                <div class="flex-center" style="gap:20px;">
+                    <a href="#equality" class="btn btn-primary">Learn More</a>
+                    <a href="#action" class="btn" style="border:2px solid var(--primary); color:var(--primary); background:rgba(221,19,103,0.05);">Join The Change</a>
+                </div>
+
+                <!-- Stats in Hero -->
+                <div class="hero-stats reveal">
+                    <div class="stat-card glass-card">
+                        <span class="stat-num counter" data-target="700">0</span>
+                        <span class="stat-label">Millions facing inequality</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-num counter" data-target="85">0</span>
+                        <span class="stat-label">% Access to equal opportunities</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-num counter" data-target="120">0</span>
+                        <span class="stat-label">Inclusive education growth</span>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <span class="stat-num counter" data-target="450">0</span>
+                        <span class="stat-label">Community initiatives</span>
+                    </div>
+                </div>
+
+                <!-- Floating Elements -->
+                <i class="fas fa-hand-holding-heart float-element" style="position:absolute; top:10%; right:-10%; font-size:3rem; color:var(--primary); opacity:0.3;"></i>
+                <i class="fas fa-users float-element" style="position:absolute; bottom:10%; left:-10%; font-size:4rem; color:var(--primary); opacity:0.2; animation-delay:2s;"></i>
+            </div>
+        </section>
+
+        <!-- Equality Section -->
+        <section id="equality" class="section-pad">
+            <div class="container">
+                <div class="glass-card reveal" style="padding: 60px 40px;">
+                    <div class="text-center" style="margin-bottom:60px;">
+                        <h2 class="gradient-text" style="font-size:3rem; margin-bottom:20px;">Equality Creates Stronger Communities</h2>
+                        <p style="max-width:700px; margin:0 auto; opacity:0.8;">We believe in a future where diversity is celebrated and barriers are removed for everyone, everywhere.</p>
+                    </div>
+                    
+                    <div class="grid-cards">
+                        <div class="equality-card glass-card" style="background:rgba(255,255,255,0.1)">
+                            <i class="fas fa-balance-scale card-icon"></i>
+                            <h3>Equal Opportunities</h3>
+                            <p>Ensuring everyone has the same chances to succeed regardless of their background or identity.</p>
+                        </div>
+                        <div class="equality-card glass-card" style="background:rgba(255,255,255,0.1)">
+                            <i class="fas fa-venus-mars card-icon"></i>
+                            <h3>Gender Equality</h3>
+                            <p>Breaking stereotypes and fostering environment where all genders have equal rights and pay.</p>
+                        </div>
+                        <div class="equality-card glass-card" style="background:rgba(255,255,255,0.1)">
+                            <i class="fas fa-user-graduate card-icon"></i>
+                            <h3>Inclusive Education</h3>
+                            <p>Providing quality education accessible to every child, including those with disabilities.</p>
+                        </div>
+                        <div class="equality-card glass-card" style="background:rgba(255,255,255,0.1)">
+                            <i class="fas fa-heartbeat card-icon"></i>
+                            <h3>Accessible Healthcare</h3>
+                            <p>Ensuring healthcare services are available and affordable to all members of society.</p>
+                        </div>
+                        <div class="equality-card glass-card" style="background:rgba(255,255,255,0.1)">
+                            <i class="fas fa-wallet card-icon"></i>
+                            <h3>Economic Inclusion</h3>
+                            <p>Supporting policies that reduce income inequality and promote financial stability for all.</p>
+                        </div>
+                        <div class="equality-card glass-card" style="background:rgba(255,255,255,0.1)">
+                            <i class="fas fa-gavel card-icon"></i>
+                            <h3>Social Justice</h3>
+                            <p>Upholding human rights and advocating for the fair treatment of all individuals in the law.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voices Section -->
+        <section id="voices" class="section-pad">
+            <div class="container">
+                <div class="glass-card reveal" style="padding: 60px 40px;">
+                    <div class="text-center" style="margin-bottom:60px;">
+                        <h2 class="gradient-text" style="font-size:3rem;">Inspiring Voices</h2>
+                        <p>Real stories of impact, resilience, and the journey towards global equality.</p>
+                    </div>
+
+                    <div class="filter-btns">
+                        <button class="filter-btn active" data-filter="all">All Stories</button>
+                        <button class="filter-btn" data-filter="youth">Youth Empowerment</button>
+                        <button class="filter-btn" data-filter="work">Inclusive Workplaces</button>
+                        <button class="filter-btn" data-filter="accessibility">Accessibility</button>
+                        <button class="filter-btn" data-filter="women">Women Leadership</button>
+                    </div>
+
+                    <div id="voices-grid" class="grid-cards">
+                        <!-- Dynamic content from JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section id="impact" class="section-pad">
+            <div class="container">
+                <div class="glass-card reveal" style="padding: 60px 40px;">
+                    <div class="text-center" style="margin-bottom:60px;">
+                        <h2 class="gradient-text" style="font-size:3rem;">Global Impact Analytics</h2>
+                        <p>Measuring our progress towards a more equal world.</p>
+                    </div>
+
+                    <div class="grid-cards">
+                        <div class="glass-card" style="padding:40px; background:rgba(255,255,255,0.1)">
+                            <h3>Equality Progress</h3>
+                            <div style="background:rgba(0,0,0,0.05); height:12px; border-radius:10px; margin:20px 0; overflow:hidden;">
+                                <div class="impact-progress" style="width:0; height:100%; background:var(--primary); transition:width 2s ease;" data-width="75%"></div>
+                            </div>
+                            <p>75% of target regions showing improved inclusion metrics.</p>
+                        </div>
+                        <div class="glass-card" style="padding:40px; background:rgba(255,255,255,0.1)">
+                            <h3>Education Access</h3>
+                            <div style="background:rgba(0,0,0,0.05); height:12px; border-radius:10px; margin:20px 0; overflow:hidden;">
+                                <div class="impact-progress" style="width:0; height:100%; background:var(--primary); transition:width 2s ease;" data-width="88%"></div>
+                            </div>
+                            <p>88% increase in inclusive classroom registrations globally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Communities Section -->
+        <section id="communities" class="section-pad">
+            <div class="container">
+                <div class="glass-card reveal" style="padding: 60px 40px;">
+                    <div class="text-center" style="margin-bottom:60px;">
+                        <h2 class="gradient-text" style="font-size:3rem;">Connected Communities</h2>
+                        <p>Harmony in diversity, unity in action.</p>
+                    </div>
+
+                    <div class="grid-cards" style="width:100%;">
+                        <div class="glass-card flex-center flex-col" style="padding:40px; text-align:center; background:rgba(255,255,255,0.1)">
+                            <i class="fas fa-globe-africa card-icon"></i>
+                            <h4>Cultural Harmony</h4>
+                            <p>Celebrating the rich tapestry of human cultures.</p>
+                        </div>
+                        <div class="glass-card flex-center flex-col" style="padding:40px; text-align:center; background:rgba(255,255,255,0.1)">
+                            <i class="fas fa-universal-access card-icon"></i>
+                            <h4>Universal Design</h4>
+                            <p>Creating spaces that welcome everyone naturally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Building Inclusive Communities Section -->
+        <section id="inclusive-communities" class="section-pad reveal">
+            <div class="container glass-card" style="background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 40px;">
+                <div class="text-center" style="margin-bottom:60px;">
+                    <h2 class="gradient-text" style="font-size:3rem; margin-bottom:20px;">Building Inclusive <span style="color:var(--text-main);">Communities</span></h2>
+                </div>
+                <div class="premium-grid">
+                    <div class="premium-card glow-hover">
+                        <i class="fas fa-book-reader premium-icon" style="color:var(--primary)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Accessible Education</h3>
+                        <p style="font-size:0.95rem; opacity: 0.85;">Ensuring universal access to learning resources and environments tailored for all abilities.</p>
+                    </div>
+                    <div class="premium-card glow-hover">
+                        <i class="fas fa-notes-medical premium-icon" style="color:var(--primary)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Equal Healthcare</h3>
+                        <p style="font-size:0.95rem; opacity: 0.85;">Providing unbiased, quality medical services accessible to marginalized groups.</p>
+                    </div>
+                    <div class="premium-card glow-hover">
+                        <i class="fas fa-briefcase premium-icon" style="color:var(--primary)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Inclusive Workplaces</h3>
+                        <p style="font-size:0.95rem; opacity: 0.85;">Cultivating professional environments that value diversity and prevent discrimination.</p>
+                    </div>
+                    <div class="premium-card glow-hover">
+                        <i class="fas fa-hands-helping premium-icon" style="color:var(--primary)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Community Support</h3>
+                        <p style="font-size:0.95rem; opacity: 0.85;">Establishing local networks that empower and uplift vulnerable populations.</p>
+                    </div>
+                    <div class="premium-card glow-hover">
+                        <i class="fas fa-users-cog premium-icon" style="color:var(--primary)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Diversity Programs</h3>
+                        <p style="font-size:0.95rem; opacity: 0.85;">Implementing structured initiatives to foster representation across sectors.</p>
+                    </div>
+                    <div class="premium-card glow-hover">
+                        <i class="fas fa-people-arrows premium-icon" style="color:var(--primary)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Social Inclusion</h3>
+                        <p style="font-size:0.95rem; opacity: 0.85;">Promoting social cohesion through shared cultural and civic engagement activities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How You Can Support Equality -->
+        <section id="support-equality" class="section-pad reveal">
+            <div class="container glass-card" style="background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 40px;">
+                <div class="text-center" style="margin-bottom:60px;">
+                    <h2 class="gradient-text" style="font-size:3rem; margin-bottom:20px;">How You Can <span style="color:var(--text-main);">Support Equality</span></h2>
+                </div>
+                <div class="premium-grid">
+                    <div class="premium-card ripple-card">
+                        <i class="fas fa-hand-holding-heart premium-icon" style="color:var(--primary)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Volunteering</h3>
+                        <div class="premium-progress-container"><div class="premium-progress-bar"></div></div>
+                        <ul class="action-list">
+                            <li><span>✓</span> Join local mentorship programs</li>
+                            <li><span>✓</span> Assist at community centers</li>
+                            <li><span>✓</span> Support crisis helplines</li>
+                        </ul>
+                    </div>
+                    <div class="premium-card ripple-card">
+                        <i class="fas fa-bullhorn premium-icon" style="color:var(--primary)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Awareness Campaigns</h3>
+                        <div class="premium-progress-container"><div class="premium-progress-bar"></div></div>
+                        <ul class="action-list">
+                            <li><span>✓</span> Share educational resources</li>
+                            <li><span>✓</span> Organize local workshops</li>
+                            <li><span>✓</span> Advocate on social media</li>
+                        </ul>
+                    </div>
+                    <div class="premium-card ripple-card">
+                        <i class="fas fa-donate premium-icon" style="color:var(--primary)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Donations</h3>
+                        <div class="premium-progress-container"><div class="premium-progress-bar"></div></div>
+                        <ul class="action-list">
+                            <li><span>✓</span> Fund equal rights organizations</li>
+                            <li><span>✓</span> Sponsor inclusive scholarships</li>
+                            <li><span>✓</span> Support minority-owned businesses</li>
+                        </ul>
+                    </div>
+                    <div class="premium-card ripple-card">
+                        <i class="fas fa-door-open premium-icon" style="color:var(--primary)"></i>
+                        <h3 class="font-heading" style="margin-bottom:15px">Inclusive Practices</h3>
+                        <div class="premium-progress-container"><div class="premium-progress-bar"></div></div>
+                        <ul class="action-list">
+                            <li><span>✓</span> Use inclusive language</li>
+                            <li><span>✓</span> Challenge stereotypes</li>
+                            <li><span>✓</span> Demand accessible venues</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action / Contact Section -->
+        <section id="action" class="section-pad">
+            <div class="container">
+                <div class="glass-card reveal" style="max-width:800px; margin:0 auto; padding:60px 40px;">
+                    <div class="text-center" style="margin-bottom:40px;">
+                        <h2 class="gradient-text" style="font-size:2.5rem;">Take Action Today</h2>
+                        <p>Your support can help build a more inclusive world. Contact us to get involved.</p>
+                    </div>
+                    
+                    <form id="contact-form" class="flex-col" style="gap:25px;">
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                            <div class="form-group">
+                                <label style="display:block; margin-bottom:8px; font-weight:600;">Full Name</label>
+                                <input type="text" id="name" placeholder="John Doe" style="width:100%; padding:14px; border-radius:10px; border:1px solid rgba(0,0,0,0.1); background:rgba(255,255,255,0.5); outline:none;">
+                            </div>
+                            <div class="form-group">
+                                <label style="display:block; margin-bottom:8px; font-weight:600;">Email Address</label>
+                                <input type="email" id="email" placeholder="john@example.com" style="width:100%; padding:14px; border-radius:10px; border:1px solid rgba(0,0,0,0.1); background:rgba(255,255,255,0.5); outline:none;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label style="display:block; margin-bottom:8px; font-weight:600;">Cause of Interest</label>
+                            <select id="cause" style="width:100%; padding:14px; border-radius:10px; border:1px solid rgba(0,0,0,0.1); background:rgba(255,255,255,0.5); outline:none;">
+                                <option value="education">Inclusive Education</option>
+                                <option value="work">Equal Employment</option>
+                                <option value="rights">Human Rights</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label style="display:block; margin-bottom:8px; font-weight:600;">Your Message</label>
+                            <textarea id="message" rows="5" placeholder="Tell us how you'd like to contribute..." style="width:100%; padding:14px; border-radius:10px; border:1px solid rgba(0,0,0,0.1); background:rgba(255,255,255,0.5); outline:none; resize:none;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="align-self:center;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="flex-center" style="position:fixed; inset:0; background:rgba(0,0,0,0.6); backdrop-filter:blur(5px); z-index:2000; display:none; opacity:0; transition:0.5s;">
+        <div class="glass-card text-center" style="max-width:400px; padding:50px;">
+            <i class="fas fa-check-circle" style="font-size:4rem; color:#28a745; margin-bottom:20px;"></i>
+            <h3>Message Sent!</h3>
+            <p style="margin-bottom:30px;">Thank you for joining the movement. We will reach out to you shortly.</p>
+            <button id="close-modal" class="btn btn-primary">Close</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="flex-center" style="position:fixed; bottom:30px; right:30px; width:50px; height:50px; border-radius:50%; background:var(--primary); color:white; border:none; cursor:pointer; display:none; box-shadow:0 5px 15px var(--primary-glow); transition:0.3s; z-index:900;"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <i class="fas fa-balance-scale" style="font-size: 2rem;"></i>
+                        <span>Sustainify</span>
+                    </div>
+                    <p style="opacity:0.8; max-width:400px; line-height:1.6;">Empowering inclusion, equality, and opportunity to create a world where everyone belongs.</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom:25px; color:var(--primary);">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#equality">Equality</a></li>
+                        <li><a href="#voices">Voices</a></li>
+                        <li><a href="#impact">Global Impact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom:25px; color:var(--primary);">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://sdgs.un.org/goals/goal10" target="_blank">United Nations SDG 10</a></li>
+                        <li><a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" target="_blank">UN Human Rights</a></li>
+                        <li><a href="https://www.unicef.org/" target="_blank">UNICEF Programs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:30px; font-size:0.9rem; opacity:0.6;">
+                &copy; 2026 <strong>Sustainify</strong> — Built by NAS
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script10.js"></script>
+    <style>
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .mt-2 { margin-top: 10px; }
+    </style>
+</body>
+</html>

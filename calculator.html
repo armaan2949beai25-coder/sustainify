@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Calculator | Sustainify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="js/components.js"></script>
+  <link rel="stylesheet" crossorigin href="/sustainify/assets/styles-eKMpT7c0.css">
+</head>
+<body>
+    <div class="blob-bg"></div>
+    <div class="blob-bg blob-bg-2"></div>
+
+    <app-navbar></app-navbar>
+
+    <!-- Dynamic background layer with specific background cycling -->
+    <div id="calcBg" class="dynamic-calc-bg" style="background-image: url('/sustainify/assets/bg1-NZBKK2x9.png');"></div>
+    
+    <main class="container calculator-wrapper page-content">
+        <!-- New full-width layout, removing the glass-card box to float over background -->
+        <h1 class="page-title fade-in-up" style="text-align: center; color: #fff; text-shadow: 0 4px 15px rgba(0,0,0,0.8);">Calculate Your Footprint</h1>
+        <p class="subtitle fade-in-up delay-1" style="text-align: center; color: #f0fdf4; text-shadow: 0 2px 10px rgba(0,0,0,0.8); margin-bottom: 2rem; font-weight: 600;">Input your lifestyle details below to accurately assess your overall carbon emissions.</p>
+
+        <div class="fade-in-up delay-2" style="max-width: 800px; margin: 0 auto; padding-top: 1rem;">
+            <form id="footprintForm" class="styled-form transparent-form">
+                
+                <!-- STEP 0: General Info -->
+                <div class="step-container" id="stepGeneralGroup">
+                    <div class="step-content-overlay">
+                        <h2><i class='bx bx-user'></i> Basic Details (Optional)</h2>
+                        <p class="step-desc">General information helps us establish a baseline.</p>
+                        
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="ageGroup">Age Group</label>
+                                <select id="ageGroup">
+                                    <option value="">Select age</option>
+                                    <option value="under18">Under 18</option>
+                                    <option value="18-25">18 - 25</option>
+                                    <option value="26-40">26 - 40</option>
+                                    <option value="41-60">41 - 60</option>
+                                    <option value="over60">60+</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="country">Country/City</label>
+                                <input type="text" id="country" placeholder="e.g., India">
+                            </div>
+                        </div>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="householdSize">Household Size</label>
+                                <input type="number" id="householdSize" min="1" placeholder="e.g., 4" required>
+                            </div>
+                            <div class="col">
+                                <label for="awareness">Sustainability Awareness</label>
+                                <select id="awareness">
+                                    <option value="">Select level</option>
+                                    <option value="low">Beginner</option>
+                                    <option value="medium">Intermediate</option>
+                                    <option value="high">Advanced</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="step-nav-buttons justify-end">
+                            <button type="button" class="btn primary-btn nav-btn" data-next="stepTransportGroup">Next Step <i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 1: Transport & Travel -->
+                <div class="step-container hidden" id="stepTransportGroup">
+                    <div class="step-content-overlay">
+                        <h2><i class='bx bxs-car'></i> Travel & Transport</h2>
+                        <p class="step-desc">Overview your daily commute and flight habits.</p>
+                        
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="transportMode">Commute Mode</label>
+                                <select id="transportMode" required>
+                                    <option value="">Select mode</option>
+                                    <option value="car-petrol">Petrol Car</option>
+                                    <option value="car-diesel">Diesel Car</option>
+                                    <option value="ev">Electric Vehicle (EV)</option>
+                                    <option value="public">Bus / Train</option>
+                                    <option value="bike">Bicycle / Walking</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="distanceQty">Daily Commute (km)</label>
+                                <input type="number" id="distanceQty" min="0" step="0.1" placeholder="e.g., 20" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="flightsShort">Short-haul flights/yr (&lt; 3 hours)</label>
+                                <input type="number" id="flightsShort" min="0" placeholder="e.g., 2" required>
+                            </div>
+                            <div class="col">
+                                <label for="flightsLong">Long-haul flights/yr (&gt; 3 hours)</label>
+                                <input type="number" id="flightsLong" min="0" placeholder="e.g., 0" required>
+                            </div>
+                        </div>
+                        
+                        <div class="step-nav-buttons">
+                            <button type="button" class="btn secondary-btn light-outline nav-btn" data-prev="stepGeneralGroup"><i class='bx bx-left-arrow-alt'></i> Back</button>
+                            <button type="button" class="btn primary-btn nav-btn" data-next="stepHomeGroup">Next Step <i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Energy & Home -->
+                <div class="step-container hidden" id="stepHomeGroup">
+                    <div class="step-content-overlay">
+                        <h2><i class='bx bxs-home'></i> Home Energy</h2>
+                        <p class="step-desc">Details about electricity, heating, and cooling.</p>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="energyUsage">Monthly Electricity (units/kWh)</label>
+                                <input type="number" id="energyUsage" min="0" step="1" placeholder="e.g., 300" required>
+                            </div>
+                            <div class="col">
+                                <label for="energyType">Primary Energy Source</label>
+                                <select id="energyType" required>
+                                    <option value="">Select energy type</option>
+                                    <option value="non-renewable">Mainly Grid (Coal/Gas)</option>
+                                    <option value="mixed">Mixed</option>
+                                    <option value="renewable">Mostly Renewable (Solar/Wind)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="cookingFuel">Cooking Fuel</label>
+                                <select id="cookingFuel" required>
+                                    <option value="">Select fuel type</option>
+                                    <option value="lpg">LPG / Gas</option>
+                                    <option value="electric">Electric / Induction</option>
+                                    <option value="biomass">Wood / Biomass</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="acHeaterUse">Daily AC/Heater Use (hours)</label>
+                                <input type="number" id="acHeaterUse" min="0" max="24" placeholder="e.g., 4" required>
+                            </div>
+                        </div>
+
+                        <div class="step-nav-buttons">
+                            <button type="button" class="btn secondary-btn light-outline nav-btn" data-prev="stepTransportGroup"><i class='bx bx-left-arrow-alt'></i> Back</button>
+                            <button type="button" class="btn primary-btn nav-btn" data-next="stepFoodGroup">Next Step <i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Food & Diet -->
+                <div class="step-container hidden" id="stepFoodGroup">
+                    <div class="step-content-overlay">
+                        <h2><i class='bx bx-restaurant'></i> Food & Diet</h2>
+                        <p class="step-desc">Diet choices have a massive impact on land and emissions.</p>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="dietType">Primary Diet</label>
+                                <select id="dietType" required>
+                                    <option value="">Select diet</option>
+                                    <option value="non-veg-heavy">Heavy Meat Eater (Daily)</option>
+                                    <option value="non-veg-light">Light Meat Eater (Weekly)</option>
+                                    <option value="vegetarian">Vegetarian</option>
+                                    <option value="vegan">Vegan</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="dairyConsumption">Dairy Consumption</label>
+                                <select id="dairyConsumption" required>
+                                    <option value="">Select frequency</option>
+                                    <option value="high">High (Daily milk, cheese)</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="low">Low / None</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eatingOut">Meals eaten out / ordered per week</label>
+                            <input type="number" id="eatingOut" min="0" placeholder="e.g., 3" required>
+                        </div>
+
+                        <div class="step-nav-buttons">
+                            <button type="button" class="btn secondary-btn light-outline nav-btn" data-prev="stepHomeGroup"><i class='bx bx-left-arrow-alt'></i> Back</button>
+                            <button type="button" class="btn primary-btn nav-btn" data-next="stepLifestyleGroup">Next Step <i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 4: Lifestyle & E-Commerce -->
+                <div class="step-container hidden" id="stepLifestyleGroup">
+                    <div class="step-content-overlay">
+                        <h2><i class='bx bx-shopping-bag'></i> Lifestyle & Shopping</h2>
+                        <p class="step-desc">Tracks buying habits and e-commerce deliveries.</p>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="clothingHabits">New Clothes Shopping</label>
+                                <select id="clothingHabits" required>
+                                    <option value="">Select frequency</option>
+                                    <option value="frequent">Frequent (Fast Fashion)</option>
+                                    <option value="average">Monthly</option>
+                                    <option value="rare">Rarely / Sustainable Brands</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="onlineOrders">Online Orders per Month</label>
+                                <input type="number" id="onlineOrders" min="0" placeholder="e.g., 5" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="expressDelivery">Preference for Express Delivery?</label>
+                                <select id="expressDelivery" required>
+                                    <option value="">Select option</option>
+                                    <option value="always">Always (Rush shipping)</option>
+                                    <option value="sometimes">Sometimes</option>
+                                    <option value="never">Never (Standard shipping)</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="gadgetFreq">Electronics Buying Frequency</label>
+                                <select id="gadgetFreq" required>
+                                    <option value="">Select frequency</option>
+                                    <option value="high">I upgrade yearly</option>
+                                    <option value="medium">Every 2-3 years</option>
+                                    <option value="low">I use things until they break</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="step-nav-buttons">
+                            <button type="button" class="btn secondary-btn light-outline nav-btn" data-prev="stepFoodGroup"><i class='bx bx-left-arrow-alt'></i> Back</button>
+                            <button type="button" class="btn primary-btn nav-btn" data-next="stepWasteWaterGroup">Next Step <i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 5: Waste & Water -->
+                <div class="step-container hidden" id="stepWasteWaterGroup">
+                    <div class="step-content-overlay">
+                        <h2><i class='bx bx-trash'></i> Waste & Water Usage</h2>
+                        <p class="step-desc">How you handle disposables and daily water usage.</p>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="recyclingHabit">Recycling Habits</label>
+                                <select id="recyclingHabit" required>
+                                    <option value="">Select habit</option>
+                                    <option value="never">Never recycle</option>
+                                    <option value="sometimes">Only paper/cardboard</option>
+                                    <option value="always">Diligent sorting & recycling</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="composting">Do you compost food waste?</label>
+                                <select id="composting" required>
+                                    <option value="">Select</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="waterUsage">Daily Water Use per person (Liters)</label>
+                                <input type="number" id="waterUsage" min="0" placeholder="e.g., 100" required>
+                            </div>
+                            <div class="col">
+                                <label for="waterAppliances">Water Saving Appliances?</label>
+                                <select id="waterAppliances" required>
+                                    <option value="">Select</option>
+                                    <option value="yes">Yes (Low-flow taps, modern flush)</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="step-nav-buttons">
+                            <button type="button" class="btn secondary-btn light-outline nav-btn" data-prev="stepLifestyleGroup"><i class='bx bx-left-arrow-alt'></i> Back</button>
+                            <button type="button" class="btn primary-btn nav-btn" data-next="stepWorkDigitalGroup">Next Step <i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 6: Work/Study & Digital -->
+                <div class="step-container hidden" id="stepWorkDigitalGroup">
+                    <div class="step-content-overlay">
+                        <h2><i class='bx bx-laptop'></i> Work & Digital</h2>
+                        <p class="step-desc">Internet usage and work habits cause emissions too!</p>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="workMode">Work / Study Setup</label>
+                                <select id="workMode" required>
+                                    <option value="">Select setup</option>
+                                    <option value="offline">Fully Offline / Commuting</option>
+                                    <option value="hybrid">Hybrid</option>
+                                    <option value="online">Fully Remote / Online</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="laptopHours">Screen Time (hours/day)</label>
+                                <input type="number" id="laptopHours" min="0" max="24" placeholder="e.g., 8" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="streamingHours">Streaming (Netflix, YT) / day</label>
+                                <input type="number" id="streamingHours" min="0" max="24" placeholder="e.g., 3" required>
+                            </div>
+                            <div class="col">
+                                <label for="videoQuality">Usual Video Quality</label>
+                                <select id="videoQuality" required>
+                                    <option value="">Select quality</option>
+                                    <option value="sd">SD (480p)</option>
+                                    <option value="hd">HD (1080p) - Most common</option>
+                                    <option value="4k">4K (Ultra HD)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="step-nav-buttons">
+                            <button type="button" class="btn secondary-btn light-outline nav-btn" data-prev="stepWasteWaterGroup"><i class='bx bx-left-arrow-alt'></i> Back</button>
+                            <button type="button" class="btn primary-btn nav-btn" data-next="stepGreenGroup">Next Step <i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 7: Green Practices -->
+                <div class="step-container hidden" id="stepGreenGroup">
+                    <div class="step-content-overlay">
+                        <h2><i class='bx bx-leaf'></i> Green Habits</h2>
+                        <p class="step-desc">Positive actions that reduce your final score!</p>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="reusableBags">Use Reusable Bags?</label>
+                                <select id="reusableBags" required>
+                                    <option value="">Select</option>
+                                    <option value="yes">Always</option>
+                                    <option value="sometimes">Sometimes</option>
+                                    <option value="no">Never (I use plastic)</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="plantTrees">Do you plant trees/garden?</label>
+                                <select id="plantTrees" required>
+                                    <option value="">Select</option>
+                                    <option value="yes">Actively</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="solarPanels">Solar Panels Installed?</label>
+                                <select id="solarPanels" required>
+                                    <option value="">Select</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="rainwater">Rainwater Harvesting?</label>
+                                <select id="rainwater" required>
+                                    <option value="yes">Yes</option>
+                                    <option value="no" selected>No</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="step-nav-buttons">
+                            <button type="button" class="btn secondary-btn light-outline nav-btn" data-prev="stepWorkDigitalGroup"><i class='bx bx-left-arrow-alt'></i> Back</button>
+                            <button type="submit" class="submit-btn primary-btn pulse-glow" style="margin-top: 0; width: auto; font-size: 1.1rem; padding: 0.8rem 2rem;">
+                                <span id="btnText">Calculate Score</span>
+                                <div class="loader hidden" id="calcLoader"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+            <!-- RESULTS STEP -->
+            <div class="step-container hidden" id="stepResultsGroup">
+                <div class="step-content-overlay result-dashboard-overlay">
+                    <div class="result-header">
+                        <h2>Your Environmental Impact <i class='bx bx-bar-chart-alt-2'></i></h2>
+                    </div>
+                    
+                    <div id="resultContent" class="hidden">
+                        <div class="total-score slide-in-bottom">
+                            <span class="big-number" id="totalOutput">0.0</span> 
+                            <span class="unit">kg CO₂e/yr</span>
+                        </div>
+                        
+                        <div class="breakdown-list">
+                            <div class="breakdown-item">
+                                <span><i class='bx bxs-car'></i> Transport</span>
+                                <strong id="outTransport">0.0 kg</strong>
+                            </div>
+                            <div class="breakdown-item">
+                                <span><i class='bx bxs-bulb'></i> Energy</span>
+                                <strong id="outEnergy">0.0 kg</strong>
+                            </div>
+                            <div class="breakdown-item">
+                                <span><i class='bx bx-food-menu'></i> Diet & Food</span>
+                                <strong id="outDiet">0.0 kg</strong>
+                            </div>
+                            <div class="breakdown-item" style="border-left-color: #f59e0b;">
+                                <span><i class='bx bx-shopping-bag'></i> Lifestyle</span>
+                                <strong id="outLifestyle">0.0 kg</strong>
+                            </div>
+                            <div class="breakdown-item" style="border-left-color: #3b82f6;">
+                                <span><i class='bx bx-water'></i> Water & Waste</span>
+                                <strong id="outWaste">0.0 kg</strong>
+                            </div>
+                            <div class="breakdown-item" style="border-left-color: #8b5cf6;">
+                                <span><i class='bx bx-laptop'></i> Digital & Work</span>
+                                <strong id="outDigital">0.0 kg</strong>
+                            </div>
+                        </div>
+                        
+                        <!-- Suggestions Container -->
+                        <div class="suggestions-box slide-in-bottom" style="margin-bottom: 2rem; background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--primary);">
+                            <h3 style="color: var(--secondary); margin-bottom: 1rem;"><i class='bx bx-bulb'></i> Personalized Tips</h3>
+                            <ul id="suggestionList" style="list-style-type: none; padding-left: 0; display: flex; flex-direction: column; gap: 0.8rem; color: #fff;">
+                                <!-- Populated dynamically -->
+                            </ul>
+                        </div>
+                        
+                        <div class="step-nav-buttons" style="justify-content: center; gap: 2rem;">
+                            <button id="clearStateBtn" class="btn secondary-btn light-outline"><i class='bx bx-reset'></i> Recalculate</button>
+                            <a href="projects.html" class="btn primary-btn">Offset Now <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                    
+                    <div id="noDataResult" class="empty-state">
+                        <i class='bx bx-error-alt'></i>
+                        <p style="color: #fff;">Calculation failed or no data entered.</p>
+                        <div style="margin-top: 1rem;">
+                             <button type="button" class="btn secondary-btn light-outline" onclick="location.reload()">Start Over</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <app-footer></app-footer>
+
+    <!-- Use Object Manipulation, Form Validation, LocalStorage, EventLoop here -->
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

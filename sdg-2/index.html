@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>document.documentElement.style.display = 'none';</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 2 – Zero Hunger</title>
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Enforce authentication -->
+  <script type="module" crossorigin src="/sustainify/assets/authCheck-G7OA-1QA.js"></script>
+  <link rel="stylesheet" crossorigin href="/sustainify/assets/sdg-2-BKm15aCP.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="progressBar"></div>
+
+    <!-- Floating Top Navigation Bar -->
+    <header class="top-nav" id="topNav">
+        <div class="nav-left">
+            <span class="nav-icon">🌾</span>
+            <span class="nav-brand">Sustainify</span>
+        </div>
+        <nav class="nav-center">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#causes" class="nav-link">Causes</a>
+            <a href="#solutions" class="nav-link">Solutions</a>
+            <a href="#quiz" class="nav-link">Quiz</a>
+        </nav>
+        <div class="nav-right">
+            <a href="#about" class="nav-cta">Learn More</a>
+        </div>
+    </header>
+
+    <!-- Floating Did You Know Card -->
+    <div class="floating-info-card" id="floatingInfo">
+        <span class="close-info" id="closeInfo">×</span>
+        <h4>🌾 Did You Know?</h4>
+        <p>Around 9% of the global population is undernourished, yet the world produces enough food to feed everyone.</p>
+    </div>
+
+    <!-- Main Container to apply background -->
+    <main class="main-container">
+        
+        <!-- Hero Section -->
+        <section class="hero glass-panel" id="home">
+            <div class="hero-content">
+                <div class="hero-icon">🥗</div>
+                <h1>SDG 2 – Zero Hunger</h1>
+                <p>End hunger, achieve food security, improve nutrition, and promote sustainable agriculture worldwide.</p>
+                <button id="learnMoreBtn" class="cta-btn">Learn More</button>
+            </div>
+        </section>
+
+        <!-- About Section (Zigzag layout style) -->
+        <section class="about section-glass" id="about">
+            <h2>About SDG 2</h2>
+            <div class="about-zigzag">
+                <div class="glass-card about-card">
+                    <div class="card-icon">🍽️</div>
+                    <h3>Hunger Crisis</h3>
+                    <p>Millions globally suffer from chronic hunger due to unequal distribution of resources, leaving communities without basic sustenance.</p>
+                </div>
+                <div class="glass-card about-card offset-right">
+                    <div class="card-icon">🌱</div>
+                    <h3>Hidden Hunger</h3>
+                    <p>Malnutrition isn't just about calories. Lacking essential vitamins and minerals permanently harms child development and adult health.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>The 2030 Vision</h3>
+                    <p>The UN's bold target is to eradicate all forms of hunger by 2030, ensuring everyone has access to safe, nutritious, and sufficient food all year round.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Causes of Hunger Section (Expanded Content) -->
+        <section class="causes section-glass" id="causes">
+            <h2>Root Causes of Hunger</h2>
+            <div class="causes-container">
+                <div class="expand-card">
+                    <h3 class="expand-title">📉 Poverty & Inequality <span>+</span></h3>
+                    <div class="expand-content">
+                        <p>Poverty is the primary driver of hunger. Families living below the poverty line cannot afford nutritious food, nor can they afford the seeds, tools, and land needed to grow their own. This creates a devastating cycle where hunger prevents people from working and learning, keeping them trapped in poverty.</p>
+                    </div>
+                </div>
+                <div class="expand-card">
+                    <h3 class="expand-title">🌍 Climate Change & Weather <span>+</span></h3>
+                    <div class="expand-content">
+                        <p>Changing weather patterns, severe droughts, and unprecedented floods destroy crops and livestock. Small-scale farmers are particularly vulnerable. When harvests fail, local food supplies plummet, prices skyrocket, and the poorest families are left unable to eat.</p>
+                    </div>
+                </div>
+                <div class="expand-card">
+                    <h3 class="expand-title">🗑️ Global Food Waste <span>+</span></h3>
+                    <div class="expand-content">
+                        <p>Shockingly, nearly one-third of all food produced for human consumption is lost or wasted globally. This happens due to poor harvesting techniques, lack of storage facilities in developing nations, and excessive consumer waste in developed countries. Reducing this waste could feed millions.</p>
+                    </div>
+                </div>
+                <div class="expand-card">
+                    <h3 class="expand-title">⚔️ Conflict & Instability <span>+</span></h3>
+                    <div class="expand-content">
+                        <p>Over half of the world's undernourished people live in conflict zones. War destroys agricultural infrastructure, displaces farming families, and disrupts trade routes. In these areas, food is often weaponized, leading to severe man-made famines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 2: Farm-to-Table Journey -->
+        <section class="journey section-glass" id="journey">
+            <h2>The Farm-to-Table Journey</h2>
+            <p style="text-align:center;">A sustainable food ecosystem connecting local farmers to families.</p>
+            
+            <div class="flow-container">
+                <div class="flow-node">
+                    <div class="node-icon glow-green">🚜</div>
+                    <p>1. Farm</p>
+                </div>
+                <div class="flow-arrow animated-arrow">➔</div>
+                <div class="flow-node">
+                    <div class="node-icon glow-yellow">🚚</div>
+                    <p>2. Transport</p>
+                </div>
+                <div class="flow-arrow animated-arrow">➔</div>
+                <div class="flow-node">
+                    <div class="node-icon glow-orange">🏪</div>
+                    <p>3. Market</p>
+                </div>
+                <div class="flow-arrow animated-arrow">➔</div>
+                <div class="flow-node">
+                    <div class="node-icon glow-red">👨‍👩‍👧‍👦</div>
+                    <p>4. Family</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 3: Smart Farming / Future Agriculture -->
+        <section class="smart-farming section-glass" id="smart-farming">
+            <h2>Future of Agriculture 🚀</h2>
+            <div class="smart-grid">
+                <div class="smart-card glass-card">
+                    <div class="smart-icon">🤖</div>
+                    <h4>AI Farming</h4>
+                    <p>Predictive models for crop health and weather.</p>
+                </div>
+                <div class="smart-card glass-card">
+                    <div class="smart-icon">🚁</div>
+                    <h4>Drone Irrigation</h4>
+                    <p>Precision watering saving 30% more resources.</p>
+                </div>
+                <div class="smart-card glass-card">
+                    <div class="smart-icon">🏢</div>
+                    <h4>Vertical Farming</h4>
+                    <p>Growing upwards to save land and space.</p>
+                </div>
+                <div class="smart-card glass-card">
+                    <div class="smart-icon">🧪</div>
+                    <h4>Hydroponics</h4>
+                    <p>Soil-less nutrient-rich farming techniques.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainable Farming Highlight Section (New Unique Section) -->
+        <section class="farming-highlight section-glass" id="farming">
+            <div class="farming-content">
+                <h2>The Power of Sustainable Farming 🚜</h2>
+                <p>Ending hunger isn't just about giving out food—it's about teaching communities how to grow it sustainably. By using crop rotation, organic fertilizers, and water-efficient irrigation, farmers can produce higher yields without destroying the soil.</p>
+                <div class="farming-stats">
+                    <div class="stat-bubble"><strong>80%</strong><br>of food comes from family farms</div>
+                    <div class="stat-bubble"><strong>+58%</strong><br>yield increase with eco-farming</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section (Alternating JS generated cards) -->
+        <section class="solutions section-glass" id="solutions">
+            <h2>Innovative Solutions</h2>
+            <div id="solutionsContainer" class="alternating-cards-container"></div>
+        </section>
+
+        <!-- Interactive Quiz Section -->
+        <section class="quiz section-glass" id="quiz">
+            <h2>Test Your Knowledge</h2>
+            <div id="quizContainer" class="glass-card quiz-card">
+                <p id="questionText">Question will appear here</p>
+                <div id="optionsContainer" class="options">
+                    <!-- Buttons generated dynamically by JS -->
+                </div>
+                <p id="feedbackText"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Redesigned Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-glass-container">
+            <!-- 1. LEFT SIDE — BRAND SECTION -->
+            <div class="footer-brand">
+                <div class="footer-logo"><span>🌾</span> Sustainify</div>
+                <div class="footer-tag">Raising awareness for SDG 2: Zero Hunger</div>
+            </div>
+            
+            <!-- 2. CENTER — NAVIGATION LINKS -->
+            <div class="footer-center">
+                <nav class="footer-nav">
+                    <a href="#about">About</a>
+                    <a href="#causes">Causes</a>
+                    <a href="#solutions">Solutions</a>
+                    <a href="#quiz">Quiz</a>
+                </nav>
+                <div class="footer-copyright">© 2026 Sustainify — Built by NAS</div>
+            </div>
+            
+            <!-- 3. RIGHT SIDE — EXTERNAL LINK & 4. FAR RIGHT — BACK TO TOP -->
+            <div class="footer-actions">
+                <a href="https://sdgs.un.org/goals/goal2" target="_blank" class="footer-cta-link">
+                    Learn More About SDG 2 <span class="external-icon">↗</span>
+                </a>
+                <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

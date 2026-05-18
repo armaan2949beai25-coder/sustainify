@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.documentElement.style.display = 'none';
+        // Fallback to prevent permanent white screen if assets fail to load
+        setTimeout(() => {
+            if (document.documentElement.style.display === 'none') {
+                document.documentElement.style.display = '';
+                document.body.innerHTML = '<h1 style="color:red; text-align:center; padding: 50px; font-family: sans-serif;">Build Configuration Error 🚨<br><br><span style="font-size: 1.2rem; color: #333;">The page assets failed to load. This usually means the "base" path in vite.config.js does not perfectly match your GitHub repository URL.<br><br>Please press F12 and check the Console to see the 404 errors.</span></h1>';
+            }
+        }, 3000);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sustainify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Auth scripts (callback must run before authCheck) -->
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+        .auth-card {
+            max-width: 400px;
+            width: 100%;
+            padding: 3rem;
+            text-align: center;
+        }
+        .auth-logo {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .auth-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.7);
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        .auth-input:focus {
+            background: white;
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(22, 163, 74, 0.2);
+        }
+        .auth-error {
+            color: #ef4444;
+            font-size: 0.9rem;
+            display: none;
+            margin-top: -0.5rem;
+        }
+        .auth-links {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .auth-links a {
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+        }
+    </style>
+  <script type="module" crossorigin src="/sustainify/assets/authCheck-G7OA-1QA.js"></script>
+  <script type="module" crossorigin src="/sustainify/assets/auth-CRkMhRkD.js"></script>
+  <link rel="stylesheet" crossorigin href="/sustainify/assets/style-BdHDphMb.css">
+</head>
+<body>
+
+    <!-- Animated Wave Background -->
+    <div class="bg-waves">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </div>
+
+    <div class="auth-container">
+        <div class="glass-card auth-card slide-up">
+            <i class="fa-solid fa-earth-americas auth-logo"></i>
+            <h2>Welcome Back</h2>
+            <p style="color: var(--text-muted);">Sign in to continue to Sustainify</p>
+            
+            <form id="loginForm" class="auth-form">
+                <input type="email" id="email" class="auth-input" placeholder="Email Address" required>
+                <input type="password" id="password" class="auth-input" placeholder="Password" required>
+                <p id="errorMsg" class="auth-error">Invalid credentials</p>
+                <button type="submit" class="btn btn-primary btn-glow" id="submitBtn">Sign In</button>
+            </form>
+            
+            <div class="auth-links">
+                Don't have an account? <a href="signup.html">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

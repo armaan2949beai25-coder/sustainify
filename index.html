@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>document.documentElement.style.display = 'none';</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainify - Global SDG Platform</title>
+    <link rel="icon" type="image/png" href="/sustainify/assets/my_logo_transparent-CmWttUhQ.png">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Enforce authentication -->
+  <script type="module" crossorigin src="/sustainify/assets/index-BqQogiBr.js"></script>
+  <link rel="modulepreload" crossorigin href="/sustainify/assets/authCheck-G7OA-1QA.js">
+  <link rel="stylesheet" crossorigin href="/sustainify/assets/style-BdHDphMb.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="glass-nav">
+        <div class="nav-brand">
+            <i class="fa-solid fa-earth-americas logo-icon"></i> SUSTAINIFY
+        </div>
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#why-sdgs">Why SDGs</a></li>
+                <li><a href="#about">About SDGs</a></li>
+                <li><a href="#explore">Explore Goals</a></li>
+                <li><a href="#impact">Impact</a></li>
+            </ul>
+            <a href="#join" class="btn btn-outline nav-contact-btn" style="padding: 0.5rem 1.5rem; border-radius: 20px;">Join Us</a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Animated Wave Background overlays (CSS driven) -->
+    <div class="bg-waves">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <main id="home" class="hero">
+
+        <!-- Interactive Canvas Background -->
+        <canvas id="hero-canvas"></canvas>
+        
+        <!-- Floating SDG Stats -->
+        <div class="parallax-layer floating-stat stat-1 glow-hover" data-speed="-1">
+            <i class="fa-solid fa-users" style="color: #2563eb;"></i>
+            <div class="stat-text">
+                <strong>193</strong>
+                <span>Nations</span>
+            </div>
+        </div>
+        <div class="parallax-layer floating-stat stat-2 glow-hover" data-speed="1.5">
+            <i class="fa-solid fa-bullseye" style="color: #e11d48;"></i>
+            <div class="stat-text">
+                <strong>17</strong>
+                <span>Goals</span>
+            </div>
+        </div>
+        <div class="parallax-layer floating-stat stat-3 glow-hover" data-speed="-2">
+            <i class="fa-solid fa-leaf" style="color: #10b981;"></i>
+            <div class="stat-text">
+                <strong>2030</strong>
+                <span>Target</span>
+            </div>
+        </div>
+
+        <div class="hero-content parallax-layer" data-speed="0.5">
+            <div class="hero-main-logo pulse-glow">
+                <img src="/sustainify/assets/my_logo_transparent-CmWttUhQ.png" alt="Sustainify Custom Logo">
+            </div>
+            <h1 class="hero-title slide-up">Building a Sustainable Future Together</h1>
+            <p class="hero-subtitle type-effect">Welcome to the central platform connecting all 17 United Nations Sustainable Development Goals. Discover global initiatives, explore data, and join the movement to transform our world by 2030.</p>
+            <div class="hero-actions stagger-fade-up">
+                <a href="#explore" class="btn btn-primary btn-glow ripple">Explore the 17 SDGs</a>
+                <a href="#about" class="btn btn-outline btn-hover-fill ripple">Learn More</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Intro Section -->
+    <section id="intro" class="reveal" style="padding: 4rem 2rem 2rem; max-width: 1200px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+            <div class="glass-card" style="padding: 3rem; text-align: center;">
+                <h2 style="font-size: 2.2rem; margin-bottom: 1rem; background: linear-gradient(135deg, #0f172a, #334155); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">What is Sustainify?</h2>
+                <p style="font-size: 1.15rem; color: #475569; line-height: 1.7;">Sustainify is an interactive platform inspired by the 17 United Nations Sustainable Development Goals (SDGs). The website aims to spread awareness about global challenges such as poverty, climate change, education, health, equality, and sustainability through informative and interactive experiences.</p>
+            </div>
+            <div class="glass-card" style="padding: 3rem; text-align: center;">
+                <h2 style="font-size: 2.2rem; margin-bottom: 1rem; background: linear-gradient(135deg, #0f172a, #334155); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">What is Sustainability?</h2>
+                <p style="font-size: 1.15rem; color: #475569; line-height: 1.7;">Sustainability means meeting our own needs without compromising the ability of future generations to meet their own needs. It is a holistic approach that balances environmental protection, social equity, and economic development to ensure a thriving planet for all.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why the SDGs Matter Section -->
+    <section id="why-sdgs" class="reveal">
+        <div class="section-header">
+            <h2>Why the SDGs Matter</h2>
+            <p>A unified global call to end poverty, protect the planet, and ensure peace by 2030.</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card reveal delay-1">
+                <div class="icon-ring"><i class="fa-solid fa-earth-europe"></i></div>
+                <h3>Climate Action</h3>
+                <p>Urgent steps to combat climate change and mitigate its widespread impacts.</p>
+            </div>
+            <div class="feature-card reveal delay-2">
+                <div class="icon-ring"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>Equal Opportunities</h3>
+                <p>Promoting equality, human rights, and leaving no one behind.</p>
+            </div>
+            <div class="feature-card reveal delay-3">
+                <div class="icon-ring"><i class="fa-solid fa-lightbulb"></i></div>
+                <h3>Sustainable Innovation</h3>
+                <p>Building resilient infrastructure and fostering green technologies.</p>
+            </div>
+            <div class="feature-card reveal delay-4">
+                <div class="icon-ring"><i class="fa-solid fa-handshake-angle"></i></div>
+                <h3>Global Collaboration</h3>
+                <p>Strengthening international partnerships for sustainable development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About SDGs Section -->
+    <section id="about" class="reveal">
+        <div class="section-header">
+            <h2>What are the SDGs?</h2>
+            <p>The Sustainable Development Goals are a universal call to action to end poverty, protect the planet, and ensure that by 2030 all people enjoy peace and prosperity.</p>
+        </div>
+        <div class="info-grid">
+            <div class="info-card glass-card reveal delay-1">
+                <i class="fa-solid fa-handshake-angle info-icon pulse"></i>
+                <div class="card-border-top" style="background: linear-gradient(90deg, #2563eb, #7c3aed);"></div>
+                <h3>Global Partnership</h3>
+                <p>193 Member States committed to this shared blueprint for peace and prosperity for people and the planet.</p>
+                <div class="counter-mini" data-target="193">0</div>
+            </div>
+            <div class="info-card glass-card reveal delay-2">
+                <i class="fa-solid fa-seedling info-icon pulse"></i>
+                <div class="card-border-top" style="background: linear-gradient(90deg, #10b981, #3b82f6);"></div>
+                <h3>Comprehensive Action</h3>
+                <p>17 integrated goals recognizing that action in one area will affect outcomes in others.</p>
+                <div class="counter-mini" data-target="17">0</div>
+            </div>
+            <div class="info-card glass-card reveal delay-3">
+                <i class="fa-solid fa-chart-line info-icon pulse"></i>
+                <div class="card-border-top" style="background: linear-gradient(90deg, #e11d48, #f59e0b);"></div>
+                <h3>Measurable Targets</h3>
+                <p>169 targets to track progress and ensure no one is left behind in the journey to 2030.</p>
+                <div class="counter-mini" data-target="169">0</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SDG Showcase Grid -->
+    <section id="explore" class="reveal">
+        <div class="section-header">
+            <h2>Explore the 17 Goals</h2>
+            <p>Click on any goal to access its dedicated digital platform and discover how you can contribute.</p>
+        </div>
+        <div id="sdg-grid" class="sdg-grid">
+            <!-- Cards injected dynamically via script.js -->
+        </div>
+    </section>
+
+    <!-- Global Impact Dashboard Section -->
+    <section id="impact" class="reveal dashboard-section">
+        <div class="dashboard-bg-pulse"></div>
+        <div class="section-header">
+            <h2>Global Impact Dashboard</h2>
+            <p>Sustainability is not just a goal; it's an ecosystem of continuous innovation and global collaboration.</p>
+        </div>
+        <div class="stats-dashboard">
+            <div class="stat-box glass-card reveal delay-1">
+                <i class="fa-solid fa-globe stat-icon" style="color: #2563eb;"></i>
+                <h3 class="counter" data-target="193">0</h3>
+                <p>Nations United</p>
+            </div>
+            <div class="stat-box glass-card reveal delay-2">
+                <i class="fa-solid fa-bullseye stat-icon" style="color: #e11d48;"></i>
+                <h3 class="counter" data-target="17">0</h3>
+                <p>Global Goals</p>
+            </div>
+            <div class="stat-box glass-card reveal delay-3">
+                <i class="fa-solid fa-calendar-check stat-icon" style="color: #10b981;"></i>
+                <h3 class="counter" data-target="2030">0</h3>
+                <p>Target Year</p>
+            </div>
+            <div class="stat-box glass-card reveal delay-4">
+                <i class="fa-solid fa-chart-pie stat-icon" style="color: #8b5cf6;"></i>
+                <h3 class="counter" data-target="169">0</h3>
+                <p>Measurable Targets</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Global SDG Statistics (World Bank API) -->
+    <section id="live-stats" class="reveal live-stats-section">
+        <div class="dashboard-bg-pulse"></div>
+        <div class="section-header">
+            <h2>Live Global SDG Statistics</h2>
+            <p>Real-world sustainability indicators for <strong>India</strong>.</p>
+        </div>
+        <div class="live-stats-grid" id="live-stats-grid">
+            <article class="live-stat-card glass-card glow-hover reveal delay-1" data-stat-id="co2">
+                <div class="live-stat-accent" style="background: linear-gradient(90deg, #3F7E44, #56C02B);"></div>
+                <div class="live-stat-icon" style="color: #3F7E44;">
+                    <i class="fa-solid fa-smog" aria-hidden="true"></i>
+                </div>
+                <h3 class="live-stat-title">CO₂ Emissions</h3>
+                <p class="live-stat-desc">Carbon dioxide emissions (latest available year)</p>
+                <p class="live-stat-value" data-value-el aria-live="polite">Loading...</p>
+                <p class="live-stat-unit" data-unit-el></p>
+                <p class="live-stat-year" data-year-el></p>
+            </article>
+            <article class="live-stat-card glass-card glow-hover reveal delay-2" data-stat-id="forest">
+                <div class="live-stat-accent" style="background: linear-gradient(90deg, #56C02B, #10b981);"></div>
+                <div class="live-stat-icon" style="color: #56C02B;">
+                    <i class="fa-solid fa-tree" aria-hidden="true"></i>
+                </div>
+                <h3 class="live-stat-title">Forest Area</h3>
+                <p class="live-stat-desc">Forest area as share of total land area</p>
+                <p class="live-stat-value" data-value-el aria-live="polite">Loading...</p>
+                <p class="live-stat-unit" data-unit-el></p>
+                <p class="live-stat-year" data-year-el></p>
+            </article>
+            <article class="live-stat-card glass-card glow-hover reveal delay-3" data-stat-id="renewable">
+                <div class="live-stat-accent" style="background: linear-gradient(90deg, #FCC30B, #f59e0b);"></div>
+                <div class="live-stat-icon" style="color: #d97706;">
+                    <i class="fa-solid fa-solar-panel" aria-hidden="true"></i>
+                </div>
+                <h3 class="live-stat-title">Renewable Energy</h3>
+                <p class="live-stat-desc">Renewable energy consumption share of total</p>
+                <p class="live-stat-value" data-value-el aria-live="polite">Loading...</p>
+                <p class="live-stat-unit" data-unit-el></p>
+                <p class="live-stat-year" data-year-el></p>
+            </article>
+            <article class="live-stat-card glass-card glow-hover reveal delay-4" data-stat-id="water">
+                <div class="live-stat-accent" style="background: linear-gradient(90deg, #26BDE2, #0ea5e9);"></div>
+                <div class="live-stat-icon" style="color: #26BDE2;">
+                    <i class="fa-solid fa-faucet-drip" aria-hidden="true"></i>
+                </div>
+                <h3 class="live-stat-title">Clean Water Access</h3>
+                <p class="live-stat-desc">People using at least basic drinking water services</p>
+                <p class="live-stat-value" data-value-el aria-live="polite">Loading...</p>
+                <p class="live-stat-unit" data-unit-el></p>
+                <p class="live-stat-year" data-year-el></p>
+            </article>
+        </div>
+
+    </section>
+
+
+
+    <!-- Featured Change Makers (Carousel) -->
+    <section id="changemakers" class="reveal">
+        <div class="section-header">
+            <h2>Featured Change Makers</h2>
+            <p>Inspiring leaders driving global sustainability.</p>
+        </div>
+        <div class="carousel-container">
+            <button id="prev-btn" class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carousel-track-container">
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Card 1 -->
+                    <div class="carousel-card glass-card">
+                        <div class="profile-img glow-ring">
+                            <img src="/sustainify/assets/img-1-B4PIfi_d.jpeg" alt="Change Maker" style="object-position: 80% 50%;">
+                        </div>
+                        <h3>Malala Yousafzai</h3>
+                        <span class="sdg-tag" style="background: rgba(197, 25, 45, 0.1); color: #C5192D;">SDG 4: Quality Education</span>
+                        <p class="quote">"One child, one teacher, one book, one pen can change the world."</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="carousel-card glass-card">
+                        <div class="profile-img glow-ring">
+                            <img src="/sustainify/assets/img-2-C_HfRGDO.jpeg" alt="Change Maker">
+                        </div>
+                        <h3>Greta Thunberg</h3>
+                        <span class="sdg-tag" style="background: rgba(63, 126, 68, 0.1); color: #3F7E44;">SDG 13: Climate Action</span>
+                        <p class="quote">"You are never too small to make a difference."</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="carousel-card glass-card">
+                        <div class="profile-img glow-ring">
+                            <img src="/sustainify/assets/img-3-Br7XMtby.jpeg" alt="Change Maker">
+                        </div>
+                        <h3>Wangari Maathai</h3>
+                        <span class="sdg-tag" style="background: rgba(86, 192, 43, 0.1); color: #56C02B;">SDG 15: Life on Land</span>
+                        <p class="quote">"It's the little things citizens do. That's what will make the difference."</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="carousel-card glass-card">
+                        <div class="profile-img glow-ring">
+                            <img src="/sustainify/assets/img-4-CDBGSYhS.jpeg" alt="Change Maker">
+                        </div>
+                        <h3>Dr. APJ Abdul Kalam</h3>
+                        <span class="sdg-tag" style="background: rgba(253, 105, 37, 0.1); color: #FD6925;">SDG 9: Innovation</span>
+                        <p class="quote">"You have to dream before your dreams can come true."</p>
+                    </div>
+                </div>
+            </div>
+            <button id="next-btn" class="nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- SDG Progress Timeline Section -->
+    <section id="timeline" class="reveal">
+        <div class="section-header">
+            <h2>SDG Progress Timeline</h2>
+            <p>Tracking the journey towards a sustainable future.</p>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div class="timeline-item reveal delay-1">
+                <div class="timeline-node glow-node"></div>
+                <div class="timeline-content glass-card hover-lift">
+                    <h3>2015</h3>
+                    <p>Adoption of the 2030 Agenda by 193 UN Member States.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal delay-2 right">
+                <div class="timeline-node glow-node"></div>
+                <div class="timeline-content glass-card hover-lift">
+                    <h3>2020</h3>
+                    <p>Decade of Action launched to accelerate sustainable solutions.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal delay-3">
+                <div class="timeline-node glow-node"></div>
+                <div class="timeline-content glass-card hover-lift">
+                    <h3>2025</h3>
+                    <p>Mid-point review and scaling of global impact initiatives.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal delay-4 right">
+                <div class="timeline-node glow-node pulse-node"></div>
+                <div class="timeline-content glass-card hover-lift target-card">
+                    <h3>2030</h3>
+                    <p>Target year to achieve the 17 Sustainable Development Goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Latest Global News -->
+    <section id="news" class="reveal">
+        <div class="section-header">
+            <h2>Latest Global News</h2>
+            <p>Updates on sustainability initiatives worldwide.</p>
+        </div>
+        <div class="news-grid">
+            <div class="news-card reveal delay-1">
+                <div class="news-img">
+                    <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=500&q=80" alt="Wind Turbines">
+                    <div class="news-overlay"><span>Read Article</span></div>
+                </div>
+                <div class="news-content glass-card">
+                    <span class="date">Oct 24, 2026</span>
+                    <h3>New Record in Renewable Energy Adoption</h3>
+                </div>
+            </div>
+            <div class="news-card reveal delay-2">
+                <div class="news-img">
+                    <img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=500&q=80" alt="Ocean Cleanup">
+                    <div class="news-overlay"><span>Read Article</span></div>
+                </div>
+                <div class="news-content glass-card">
+                    <span class="date">Oct 18, 2026</span>
+                    <h3>Global Ocean Cleanup Removes 10,000 Tons</h3>
+                </div>
+            </div>
+            <div class="news-card reveal delay-3">
+                <div class="news-img">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=500&q=80" alt="Education">
+                    <div class="news-overlay"><span>Read Article</span></div>
+                </div>
+                <div class="news-content glass-card">
+                    <span class="date">Oct 12, 2026</span>
+                    <h3>Tech Grants Boost Education in Rural Areas</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Community Impact Feed -->
+    <section id="live-feed" class="reveal">
+        <div class="section-header">
+            <h2>Live Community Impact</h2>
+            <p>See what actions changemakers around the world are taking right now.</p>
+        </div>
+        <div class="feed-container glass-card" style="max-width: 800px; margin: 0 auto; padding: 2rem; position: relative; overflow: hidden; min-height: 200px;">
+            <p class="feed-hint"><i class="fa-solid fa-circle-info"></i> Click the <strong>eye</strong> on any SDG visit to see who explored that goal.</p>
+            <div id="activity-list" class="activity-list">
+                <div class="feed-loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Loading live activity...
+                </div>
+            </div>
+            <div class="dashboard-bg-pulse" style="opacity: 0.3;"></div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer id="contact" class="premium-footer reveal">
+        <div class="footer-wave-border"></div>
+        <div class="footer-content">
+            <!-- Left: Branding -->
+            <div class="footer-brand">
+                <h2><i class="fa-solid fa-earth-americas footer-logo-glow"></i> SUSTAINIFY</h2>
+                <p>Building a Better Tomorrow. Connecting the world through the Sustainable Development Goals.</p>
+                <div class="mini-sdg-icons">
+                    <i class="fa-solid fa-users" style="color: #E5243B;"></i>
+                    <i class="fa-solid fa-leaf" style="color: #4C9F38;"></i>
+                    <i class="fa-solid fa-water" style="color: #0A97D9;"></i>
+                    <i class="fa-solid fa-scale-balanced" style="color: #00689D;"></i>
+                </div>
+            </div>
+            
+            <!-- Center: Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About SDGs</a></li>
+                    <li><a href="#explore">Explore Goals</a></li>
+                    <li><a href="#impact">Global Impact</a></li>
+                    <li><a href="#live-stats">Live Statistics</a></li>
+                </ul>
+            </div>
+
+            <!-- Right: External Resources & Contact -->
+            <div class="footer-resources">
+                <h4>External Resources</h4>
+                <ul>
+                    <li><a href="https://sdgs.un.org/goals" target="_blank">United Nations SDGs</a></li>
+                    <li><a href="https://www.undp.org/" target="_blank">UN Development Programme</a></li>
+                    <li><a href="mailto:contact@sustainify.org">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                &copy; 2026 Sustainify — Global SDG Platform
+                <br>
+                <span class="built-by">BUILT BY NAS 🚀</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="live-stats.js"></script>
+</body>
+</html>
