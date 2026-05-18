@@ -138,7 +138,7 @@ ul { list-style: none; }
 @keyframes spin { 0% { transform: rotate(0deg) }
 100% { transform: rotate(360deg) }
 }
-; .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #fff; border: none; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); opacity: 0; visibility: hidden; transition: var(--transition); z-index: 99; }
 .back-to-top.show { opacity: 1; visibility: visible; }
