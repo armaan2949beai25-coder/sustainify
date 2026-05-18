@@ -725,6 +725,182 @@ section {
 }
 
 /* ==========================================================================
+   LIVE COMMUNITY IMPACT FEED
+   ========================================================================== */
+.feed-hint {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+}
+.feed-hint i {
+  color: var(--primary-blue);
+  margin-right: 0.35rem;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  max-height: min(420px, 52vh);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.25rem;
+  scroll-behavior: smooth;
+}
+
+.activity-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.activity-list::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.04);
+  border-radius: 8px;
+}
+
+.activity-list::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.35);
+  border-radius: 8px;
+}
+
+.activity-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.55);
+}
+
+.feed-scroll-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.feed-loading,
+.feed-empty,
+.feed-error {
+  text-align: center;
+  color: #64748b;
+  font-style: italic;
+  padding: 1rem;
+}
+
+.feed-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  padding: 1rem 1.1rem;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-blue);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.feed-item:hover {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.1);
+}
+
+.feed-eye-btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feed-eye-btn:hover,
+.feed-eye-btn[aria-expanded="true"] {
+  background: var(--primary-blue);
+  color: #fff;
+  transform: scale(1.06);
+  box-shadow: 0 0 16px rgba(37, 99, 235, 0.35);
+}
+
+.feed-item-icon {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.feed-item-body {
+  flex: 1;
+  min-width: 160px;
+}
+
+.feed-item-body p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-heading);
+}
+
+.feed-time {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.feed-visitors-panel {
+  flex: 0 0 100%;
+  margin-top: 0.25rem;
+  padding: 0.85rem 1rem 0.5rem;
+  border-top: 1px dashed rgba(37, 99, 235, 0.2);
+  animation: fadeInUp 0.35s ease forwards;
+}
+
+.feed-visitors-panel[hidden] {
+  display: none !important;
+}
+
+.feed-visitors-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--primary-blue);
+  margin-bottom: 0.65rem;
+}
+
+.feed-visitor-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.45rem 0;
+  font-size: 0.92rem;
+  color: #334155;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.feed-visitor-row:last-child {
+  border-bottom: none;
+}
+
+.feed-visitor-row i {
+  color: var(--primary-green);
+  margin-right: 0.5rem;
+}
+
+.feed-visitors-loading {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* ==========================================================================
    TAKE ACTION TODAY
    ========================================================================== */
 .action-grid {
@@ -974,3 +1150,24 @@ section {
     backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
   }
 }
+
+/* Custom Hero Main Logo */
+.hero-main-logo {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-main-logo img {
+  width: 120px; /* Adjust size as needed */
+  height: auto;
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+@media (max-width: 768px) {
+  .hero-main-logo img {
+    width: 90px;
+  }
+}
+

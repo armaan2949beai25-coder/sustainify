@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>document.documentElement.style.display = 'none';</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustainify - Global SDG Platform</title>
+    <link rel="icon" type="image/png" href="images/my_logo_transparent.png">
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Enforce authentication -->
+    <script type="module" src="js/authCallback.js"></script>
+    <script type="module" src="js/authCheck.js"></script>
 </head>
 <body>
 
@@ -41,6 +46,7 @@
 
     <!-- Hero Section -->
     <main id="home" class="hero">
+
         <!-- Interactive Canvas Background -->
         <canvas id="hero-canvas"></canvas>
         
@@ -68,8 +74,8 @@
         </div>
 
         <div class="hero-content parallax-layer" data-speed="0.5">
-            <div class="hero-floating-icon pulse-glow">
-                <i class="fa-solid fa-globe"></i>
+            <div class="hero-main-logo pulse-glow">
+                <img src="images/my_logo_transparent.png" alt="Sustainify Custom Logo">
             </div>
             <h1 class="hero-title slide-up">Building a Sustainable Future Together</h1>
             <p class="hero-subtitle type-effect">Welcome to the central platform connecting all 17 United Nations Sustainable Development Goals. Discover global initiatives, explore data, and join the movement to transform our world by 2030.</p>
@@ -202,7 +208,7 @@
         <div class="dashboard-bg-pulse"></div>
         <div class="section-header">
             <h2>Live Global SDG Statistics</h2>
-            <p>Real-world sustainability indicators for <strong>India</strong>, sourced live from the <a href="https://data.worldbank.org/" target="_blank" rel="noopener noreferrer">World Bank Open Data</a> API.</p>
+            <p>Real-world sustainability indicators for <strong>India</strong>.</p>
         </div>
         <div class="live-stats-grid" id="live-stats-grid">
             <article class="live-stat-card glass-card glow-hover reveal delay-1" data-stat-id="co2">
@@ -250,45 +256,10 @@
                 <p class="live-stat-year" data-year-el></p>
             </article>
         </div>
-        <p class="live-stats-attribution">
-            <i class="fa-solid fa-database" aria-hidden="true"></i>
-            Data updates as published by the World Bank. Country code: <strong>IN</strong> (India).
-        </p>
+
     </section>
 
-    <!-- Take Action Today Section -->
-    <section id="action" class="reveal">
-        <div class="section-header">
-            <h2>Take Action Today</h2>
-            <p>Small steps lead to massive global changes. Start your journey now.</p>
-        </div>
-        <div class="action-grid">
-            <div class="action-card glass-card reveal delay-1">
-                <div class="action-icon water-icon"><i class="fa-solid fa-droplet"></i></div>
-                <h3>Save Water</h3>
-                <div class="progress-bar"><div class="progress" style="width: 75%; background: #0ea5e9;"></div></div>
-                <a href="#" class="btn btn-sm btn-outline">Start Now</a>
-            </div>
-            <div class="action-card glass-card reveal delay-2">
-                <div class="action-icon plastic-icon"><i class="fa-solid fa-bottle-water"></i></div>
-                <h3>Reduce Plastic</h3>
-                <div class="progress-bar"><div class="progress" style="width: 50%; background: #f59e0b;"></div></div>
-                <a href="#" class="btn btn-sm btn-outline">Start Now</a>
-            </div>
-            <div class="action-card glass-card reveal delay-3">
-                <div class="action-icon energy-icon"><i class="fa-solid fa-bolt"></i></div>
-                <h3>Renewable Energy</h3>
-                <div class="progress-bar"><div class="progress" style="width: 60%; background: #eab308;"></div></div>
-                <a href="#" class="btn btn-sm btn-outline">Start Now</a>
-            </div>
-            <div class="action-card glass-card reveal delay-4">
-                <div class="action-icon tree-icon"><i class="fa-solid fa-tree"></i></div>
-                <h3>Plant Trees</h3>
-                <div class="progress-bar"><div class="progress" style="width: 85%; background: #22c55e;"></div></div>
-                <a href="#" class="btn btn-sm btn-outline">Start Now</a>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Featured Change Makers (Carousel) -->
     <section id="changemakers" class="reveal">
@@ -303,7 +274,7 @@
                     <!-- Card 1 -->
                     <div class="carousel-card glass-card">
                         <div class="profile-img glow-ring">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Change Maker">
+                            <img src="images/img-1.jpeg" alt="Change Maker" style="object-position: 80% 50%;">
                         </div>
                         <h3>Malala Yousafzai</h3>
                         <span class="sdg-tag" style="background: rgba(197, 25, 45, 0.1); color: #C5192D;">SDG 4: Quality Education</span>
@@ -312,7 +283,7 @@
                     <!-- Card 2 -->
                     <div class="carousel-card glass-card">
                         <div class="profile-img glow-ring">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Change Maker">
+                            <img src="images/img-2.jpeg" alt="Change Maker">
                         </div>
                         <h3>Greta Thunberg</h3>
                         <span class="sdg-tag" style="background: rgba(63, 126, 68, 0.1); color: #3F7E44;">SDG 13: Climate Action</span>
@@ -321,7 +292,7 @@
                     <!-- Card 3 -->
                     <div class="carousel-card glass-card">
                         <div class="profile-img glow-ring">
-                            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1bf08c?auto=format&fit=crop&w=150&q=80" alt="Change Maker">
+                            <img src="images/img-3.jpeg" alt="Change Maker">
                         </div>
                         <h3>Wangari Maathai</h3>
                         <span class="sdg-tag" style="background: rgba(86, 192, 43, 0.1); color: #56C02B;">SDG 15: Life on Land</span>
@@ -330,7 +301,7 @@
                     <!-- Card 4 -->
                     <div class="carousel-card glass-card">
                         <div class="profile-img glow-ring">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" alt="Change Maker">
+                            <img src="images/img-4.jpeg" alt="Change Maker">
                         </div>
                         <h3>Dr. APJ Abdul Kalam</h3>
                         <span class="sdg-tag" style="background: rgba(253, 105, 37, 0.1); color: #FD6925;">SDG 9: Innovation</span>
@@ -381,21 +352,7 @@
         </div>
     </section>
 
-    <!-- Sustainability Quiz Section -->
-    <section id="quiz" class="reveal">
-        <div class="quiz-container glass-card">
-            <div class="quiz-content">
-                <h2>Which SDG Matches Your Personality?</h2>
-                <p>Take our interactive 1-minute quiz to find out where you can make the biggest impact!</p>
-                <div id="quiz-area">
-                    <button class="btn btn-primary btn-glow" id="start-quiz-btn">Start Quiz <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-            <div class="quiz-icon floating-anim">
-                <i class="fa-solid fa-clipboard-question"></i>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Latest Global News -->
     <section id="news" class="reveal">
@@ -416,7 +373,7 @@
             </div>
             <div class="news-card reveal delay-2">
                 <div class="news-img">
-                    <img src="https://images.unsplash.com/photo-1535090467336-9501f96e2362?auto=format&fit=crop&w=500&q=80" alt="Ocean Cleanup">
+                    <img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=500&q=80" alt="Ocean Cleanup">
                     <div class="news-overlay"><span>Read Article</span></div>
                 </div>
                 <div class="news-content glass-card">
@@ -437,26 +394,24 @@
         </div>
     </section>
 
-    <!-- Join the Movement CTA -->
-    <section id="join" class="reveal">
-        <div class="cta-container glass-card">
-            <div class="cta-bg-particles" id="cta-particles"></div>
-            <div class="cta-content">
-                <h2>Together We Can Achieve the 2030 Goals</h2>
-                <p>Join millions of change makers worldwide. Subscribe to our newsletter for weekly impact updates.</p>
-                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn btn-primary btn-glow">Subscribe</button>
-                </form>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+    <!-- Live Community Impact Feed -->
+    <section id="live-feed" class="reveal">
+        <div class="section-header">
+            <h2>Live Community Impact</h2>
+            <p>See what actions changemakers around the world are taking right now.</p>
+        </div>
+        <div class="feed-container glass-card" style="max-width: 800px; margin: 0 auto; padding: 2rem; position: relative; overflow: hidden; min-height: 200px;">
+            <p class="feed-hint"><i class="fa-solid fa-circle-info"></i> Click the <strong>eye</strong> on any SDG visit to see who explored that goal.</p>
+            <div id="activity-list" class="activity-list">
+                <div class="feed-loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Loading live activity...
                 </div>
             </div>
+            <div class="dashboard-bg-pulse" style="opacity: 0.3;"></div>
         </div>
     </section>
+
+
 
     <!-- Footer -->
     <footer id="contact" class="premium-footer reveal">
@@ -507,5 +462,6 @@
 
     <script src="script.js"></script>
     <script src="live-stats.js"></script>
+    <script type="module" src="js/tracking.js"></script>
 </body>
 </html>
