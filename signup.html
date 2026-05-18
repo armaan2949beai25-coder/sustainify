@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>document.documentElement.style.display = 'none';</script>
+    <script>
+        document.documentElement.style.display = 'none';
+        // Fallback to prevent permanent white screen if assets fail to load
+        setTimeout(() => {
+            if (document.documentElement.style.display === 'none') {
+                document.documentElement.style.display = '';
+                document.body.innerHTML = '<h1 style="color:red; text-align:center; padding: 50px; font-family: sans-serif;">Build Configuration Error 🚨<br><br><span style="font-size: 1.2rem; color: #333;">The page assets failed to load. This usually means the "base" path in vite.config.js does not perfectly match your GitHub repository URL.<br><br>Please press F12 and check the Console to see the 404 errors.</span></h1>';
+            }
+        }, 3000);
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Sustainify</title>

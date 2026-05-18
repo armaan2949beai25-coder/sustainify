@@ -25,9 +25,19 @@ const getHtmlEntries = () => {
   return entries;
 };
 
+// Automatically determine the base path for GitHub Pages
+// GITHUB_REPOSITORY is automatically set by GitHub Actions (e.g., 'username/repo-name')
+const getBasePath = () => {
+  if (process.env.GITHUB_REPOSITORY) {
+    const repoName = process.env.GITHUB_REPOSITORY.split('/')[1];
+    return `/${repoName}/`;
+  }
+  return '/'; // Fallback for local testing or custom domains
+};
+
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/sustainify/',
+  base: getBasePath(),
   plugins: [
     react(),
     tailwindcss(),
