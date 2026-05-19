@@ -27,7 +27,7 @@ const getHtmlEntries = () => {
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/sustainify/',
+  base: '/',
   plugins: [
     react(),
     tailwindcss(),
