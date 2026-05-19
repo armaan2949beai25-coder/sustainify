@@ -55,15 +55,83 @@ function parseUserId(userId) {
   };
 }
 
-/** Email shown in feed and visitor list */
-function labelFromRow(row, ctx = null) {
-  if (row.user_email?.includes('@')) return row.user_email;
-  const packed = parseUserId(row.user_id).email;
-  if (packed?.includes('@')) return packed;
-  if (row.user_label?.includes('@')) return row.user_label;
-  // Your old rows only have uuid — show YOUR email when you are logged in
-  if (ctx?.email && rowMatchesSession(row, ctx)) return ctx.email;
-  return 'Unknown visitor';
+/** Stable key per visitor (auth uuid preferred) */
+function userKeyFromRow(row) {
+  if (!row) return null;
+  const { id } = parseUserId(row.user_id);
+  if (id) return id;
+  if (row.user_email?.includes('@')) return row.user_email.trim().toLowerCase();
+  if (row.user_label?.includes('@')) return row.user_label.trim().toLowerCase();
+  return null;
+}
+
+/**
+ * Assign User1, User2, … by order of first activity in the database.
+ * Same person always keeps the same label for every viewer.
+ */
+async function buildUserLabelMap() {
+  let { data, error } = await supabase
+    .from('user_sdg_progress')
+    .select('user_id, user_email, timestamp')
+    .order('timestamp', { ascending: true })
+    .limit(1000);
+
+  if (error?.message?.includes('user_email')) {
+    const fallback = await supabase
+      .from('user_sdg_progress')
+      .select('user_id, timestamp')
+      .order('timestamp', { ascending: true })
+      .limit(1000);
+    data = fallback.data;
+    error = fallback.error;
+  }
+
+  if (error) {
+    console.warn('[Live Feed] Could not build user labels:', error.message);
+    return new Map();
+  }
+
+  const firstSeen = new Map();
+  for (const row of data || []) {
+    const key = userKeyFromRow(row);
+    if (!key || firstSeen.has(key)) continue;
+    firstSeen.set(key, row.timestamp);
+  }
+
+  const sortedKeys = [...firstSeen.keys()].sort(
+    (a, b) => new Date(firstSeen.get(a)) - new Date(firstSeen.get(b))
+  );
+
+  const labelMap = new Map();
+  let n = 1;
+  for (const key of sortedKeys) {
+    labelMap.set(key, `User${n}`);
+    n += 1;
+  }
+
+  return labelMap;
+}
+
+/** Cached labels so visitor panels match the main feed */
+let cachedUserLabelMap = new Map();
+
+/**
+ * Display name in feed / visitor list.
+ * — You (logged in): your Gmail on your own actions only
+ * — Everyone else: User1, User2, … (never their email)
+ */
+function labelFromRow(row, ctx = null, labelMap = cachedUserLabelMap) {
+  const key = userKeyFromRow(row);
+
+  if (ctx?.userId && key && key === ctx.userId) {
+    return ctx.email || row.user_email?.trim() || 'You';
+  }
+
+  if (key && labelMap?.has(key)) {
+    return labelMap.get(key);
+  }
+
+  return 'User?';
 }
 
 /** Relative time string */
@@ -199,7 +267,7 @@ function renderVisitorPanel(panel, goalId, visitors, ctx) {
     .map(
       (v) => `
       <div class="feed-visitor-row">
-        <span><i class="fa-solid fa-user"></i>${escapeHtml(labelFromRow(v, ctx))}</span>
+        <span><i class="fa-solid fa-user"></i>${escapeHtml(labelFromRow(v, ctx, cachedUserLabelMap))}</span>
         <span class="feed-time">${formatTimeAgo(v.timestamp)}</span>
       </div>
     `
@@ -234,6 +302,9 @@ async function onEyeClick(btn) {
 
   try {
     const ctx = await getSessionContext();
+    if (!cachedUserLabelMap.size) {
+      cachedUserLabelMap = await buildUserLabelMap();
+    }
     const visitors = await fetchGoalVisitors(goalId);
     renderVisitorPanel(panel, goalId, visitors, ctx);
   } catch (err) {
@@ -277,6 +348,7 @@ export async function fetchRecentActivity() {
 
   try {
     const ctx = await getSessionContext();
+    cachedUserLabelMap = await buildUserLabelMap();
 
     let { data, error } = await supabase
       .from('user_sdg_progress')
@@ -311,7 +383,7 @@ export async function fetchRecentActivity() {
       feedItem.className = 'feed-item glow-hover';
 
       const timeAgo = formatTimeAgo(item.timestamp);
-      const who = escapeHtml(labelFromRow(item, ctx));
+      const who = escapeHtml(labelFromRow(item, ctx, cachedUserLabelMap));
       let message = 'Someone took an action';
       let iconClass = 'fa-bolt';
       let iconColor = '#eab308';
