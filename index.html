@@ -7,6 +7,8 @@
     <title>Sustainify - Global SDG Platform</title>
     <link rel="icon" type="image/png" href="images/my_logo_transparent.png">
     <link rel="stylesheet" href="style.css">
+    <!-- analytics.css loaded via analytics.js (dev: also linked for live reload without module) -->
+    <link rel="stylesheet" href="analytics.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Enforce authentication -->
@@ -17,8 +19,8 @@
 
     <!-- Navigation -->
     <nav id="navbar" class="glass-nav">
-        <div class="nav-brand">
-            <i class="fa-solid fa-earth-americas logo-icon"></i> SUSTAINIFY
+        <div class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
+            <img src="images/enhanced_logo_transparent.png" alt="Logo" class="logo-icon" style="height: 36px; width: auto;"> SUSTAINIFY
         </div>
         <div class="nav-menu" id="nav-menu">
             <ul class="nav-links">
@@ -395,12 +397,12 @@
     </section>
 
     <!-- Live Community Impact Feed -->
-    <section id="live-feed" class="reveal">
-        <div class="section-header">
-            <h2>Live Community Impact</h2>
+    <section id="live-feed" class="live-feed-section reveal">
+        <div class="section-header live-feed-header">
+            <h2>Live Testimonials</h2>
             <p>See what actions changemakers around the world are taking right now.</p>
         </div>
-        <div class="feed-container glass-card" style="max-width: 800px; margin: 0 auto; padding: 2rem; position: relative; overflow: hidden; min-height: 200px;">
+        <div class="feed-container glass-card">
             <p class="feed-hint"><i class="fa-solid fa-circle-info"></i> Click the <strong>eye</strong> on any SDG visit to see who explored that goal.</p>
             <div id="activity-list" class="activity-list">
                 <div class="feed-loading">
@@ -411,7 +413,87 @@
         </div>
     </section>
 
-
+    <!-- SDG Engagement Analytics (see analytics.html for fragment source) -->
+    <section id="sdg-analytics" class="sdg-analytics-section reveal" aria-labelledby="analytics-heading">
+      <div class="analytics-bg-glow" aria-hidden="true"></div>
+      <div class="section-header analytics-header">
+        <span class="analytics-badge"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Live Data</span>
+        <h2 id="analytics-heading">SDG Engagement Analytics</h2>
+        <p class="analytics-subtitle">Real-time insights into which Sustainable Development Goals visitors explore most on Sustainify.</p>
+      </div>
+      <div id="analytics-loading" class="analytics-state analytics-loading glass-card" role="status" aria-live="polite">
+        <div class="analytics-spinner" aria-hidden="true"></div>
+        <p>Loading engagement data from Supabase…</p>
+      </div>
+      <div id="analytics-error" class="analytics-state analytics-error glass-card" role="alert" hidden>
+        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+        <p id="analytics-error-message">Unable to load analytics. Please try again later.</p>
+        <button type="button" id="analytics-retry-btn" class="btn btn-outline analytics-retry-btn">
+          <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> Retry
+        </button>
+      </div>
+      <div id="analytics-dashboard" class="analytics-dashboard" hidden>
+        <div class="analytics-summary-grid">
+          <article class="analytics-summary-card glass-card glow-hover">
+            <div class="summary-icon" style="--accent: #2563eb;">
+              <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i>
+            </div>
+            <p class="summary-label">Total Interactions</p>
+            <p class="summary-value" id="analytics-total">0</p>
+            <p class="summary-hint">SDG card clicks recorded</p>
+          </article>
+          <article class="analytics-summary-card glass-card glow-hover">
+            <div class="summary-icon" style="--accent: #10b981;">
+              <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
+            </div>
+            <p class="summary-label">Most Visited SDG</p>
+            <p class="summary-value summary-value--sdg" id="analytics-most">
+              <span class="sdg-pill" id="analytics-most-pill">—</span>
+              <span id="analytics-most-label">—</span>
+            </p>
+            <p class="summary-hint"><span id="analytics-most-count">0</span> clicks</p>
+          </article>
+          <article class="analytics-summary-card glass-card glow-hover">
+            <div class="summary-icon" style="--accent: #e11d48;">
+              <i class="fa-solid fa-arrow-trend-down" aria-hidden="true"></i>
+            </div>
+            <p class="summary-label">Least Visited SDG</p>
+            <p class="summary-value summary-value--sdg" id="analytics-least">
+              <span class="sdg-pill" id="analytics-least-pill">—</span>
+              <span id="analytics-least-label">—</span>
+            </p>
+            <p class="summary-hint"><span id="analytics-least-count">0</span> clicks</p>
+          </article>
+        </div>
+        <div class="analytics-chart-panel glass-card">
+          <div class="analytics-chart-header">
+            <h3><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Click Distribution</h3>
+            <button type="button" id="analytics-refresh-btn" class="analytics-refresh-btn" title="Refresh data" aria-label="Refresh analytics data">
+              <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="analytics-chart-layout">
+            <div class="analytics-chart-wrap">
+              <p id="analytics-chart-empty" class="analytics-chart-empty" hidden>No SDG clicks recorded yet. Explore a goal above to populate this chart.</p>
+              <canvas id="sdg-engagement-chart" role="img" aria-label="Pie chart of SDG card click distribution"></canvas>
+            </div>
+            <div class="analytics-legend-panel">
+              <div class="analytics-legend-intro">
+                <h4 class="analytics-legend-title">User Engagement</h4>
+                <p class="analytics-legend-desc">How many times visitors clicked each SDG card to explore that goal.</p>
+              </div>
+              <div class="analytics-legend-header" aria-hidden="true">
+                <span class="legend-header-swatch"></span>
+                <span class="legend-header-goal">SDG Goal</span>
+                <span class="legend-header-clicks">Clicks</span>
+                <span class="legend-header-share">Share</span>
+              </div>
+              <div id="analytics-legend" class="analytics-legend-list" role="list" aria-label="SDG click breakdown"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="contact" class="premium-footer reveal">
@@ -438,6 +520,7 @@
                     <li><a href="#explore">Explore Goals</a></li>
                     <li><a href="#impact">Global Impact</a></li>
                     <li><a href="#live-stats">Live Statistics</a></li>
+                    <li><a href="#sdg-analytics">Engagement Analytics</a></li>
                 </ul>
             </div>
 
@@ -460,8 +543,12 @@
         </div>
     </footer>
 
+    <!-- Chart.js (CDN) — required before analytics.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
     <script type="module" src="script.js"></script>
     <script type="module" src="live-stats.js"></script>
     <script type="module" src="js/tracking.js"></script>
+    <script type="module" src="analytics.js"></script>
 </body>
 </html>
+

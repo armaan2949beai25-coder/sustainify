@@ -376,7 +376,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const goalNum = numEl ? numEl.textContent.replace('#', '').trim() : 'Unknown';
 
       const saved = await logAction('view_goal', goalNum);
-      if (saved) await fetchRecentActivity();
+      if (saved) {
+        await fetchRecentActivity();
+        window.dispatchEvent(new CustomEvent('sdg-analytics-refresh'));
+      }
 
       window.location.href = card.getAttribute('href');
     });

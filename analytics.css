@@ -1,0 +1,511 @@
+/**
+ * analytics.css — SDG Engagement Analytics dashboard
+ * Glassmorphism layout, responsive chart/legend grid, dark/light theme via prefers-color-scheme
+ */
+
+/* ==========================================================================
+   Theme tokens (light default; dark overrides below)
+   ========================================================================== */
+.sdg-analytics-section {
+  /* Always use light white panels for readability (ignores OS dark mode) */
+  --analytics-bg: #ffffff;
+  --analytics-border: rgba(15, 23, 42, 0.1);
+  --analytics-text: #0f172a;
+  --analytics-muted: #475569;
+  --analytics-subtitle: #1e293b;
+  --analytics-glow: rgba(37, 99, 235, 0.1);
+  --analytics-panel-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+  --analytics-badge-bg: rgba(37, 99, 235, 0.1);
+  --analytics-badge-text: #2563eb;
+  --legend-hover: rgba(37, 99, 235, 0.06);
+  --legend-zero: #94a3b8;
+  color-scheme: light;
+  position: relative;
+  padding: 3rem 1.5rem 3.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Force white cards inside analytics (overrides global glass / dark OS theme) */
+.sdg-analytics-section .glass-card {
+  background: #ffffff !important;
+  border: 1px solid var(--analytics-border) !important;
+  box-shadow: var(--analytics-panel-shadow);
+}
+
+.sdg-analytics-section .glass-card:hover {
+  background: #ffffff !important;
+  box-shadow: 0 16px 48px rgba(15, 23, 42, 0.12);
+}
+
+/* Ambient background glow behind section */
+.analytics-bg-glow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(700px, 90vw);
+  height: min(700px, 90vw);
+  background: radial-gradient(circle, var(--analytics-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: analyticsPulse 8s ease-in-out infinite;
+}
+
+@keyframes analyticsPulse {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+.sdg-analytics-section > *:not(.analytics-bg-glow) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Header (slightly smaller than global section-header)
+   ========================================================================== */
+.sdg-analytics-section .section-header.analytics-header {
+  margin-bottom: 2rem;
+}
+
+.sdg-analytics-section .analytics-header h2 {
+  font-size: clamp(1.65rem, 3vw, 2.1rem);
+  margin-bottom: 0.5rem;
+}
+
+.analytics-header .analytics-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--analytics-badge-bg);
+  color: var(--analytics-badge-text);
+  margin-bottom: 0.75rem;
+}
+
+.analytics-header h2 {
+  color: var(--analytics-text);
+}
+
+.analytics-header p,
+.analytics-header .analytics-subtitle {
+  color: var(--analytics-subtitle);
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Loading & error states
+   ========================================================================== */
+.analytics-state {
+  max-width: 520px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-radius: 20px;
+  background: var(--analytics-bg) !important;
+  border: 1px solid var(--analytics-border);
+  box-shadow: var(--analytics-panel-shadow);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.analytics-state p {
+  color: var(--analytics-muted);
+  margin-top: 1rem;
+}
+
+.analytics-error i {
+  font-size: 2rem;
+  color: #e11d48;
+}
+
+.analytics-spinner {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  border: 3px solid rgba(37, 99, 235, 0.15);
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: analyticsSpin 0.9s linear infinite;
+}
+
+@keyframes analyticsSpin {
+  to { transform: rotate(360deg); }
+}
+
+.analytics-retry-btn {
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ==========================================================================
+   Summary cards (responsive grid)
+   ========================================================================== */
+.analytics-dashboard {
+  animation: analyticsFadeIn 0.6s ease forwards;
+}
+
+@keyframes analyticsFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.analytics-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.analytics-summary-card {
+  padding: 1rem 0.85rem;
+  border-radius: 14px;
+  text-align: center;
+  background: var(--analytics-bg) !important;
+  border: 1px solid var(--analytics-border);
+  box-shadow: var(--analytics-panel-shadow);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+}
+
+.analytics-summary-card:hover {
+  transform: translateY(-6px);
+}
+
+.summary-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 0.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.summary-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--analytics-muted);
+  margin-bottom: 0.35rem;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--analytics-text);
+  font-family: 'Outfit', 'Inter', sans-serif;
+  line-height: 1.2;
+}
+
+.summary-value--sdg {
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.sdg-pill {
+  display: inline-block;
+  min-width: 2rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: #fff;
+  background: var(--sdg-pill-color, #2563eb);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--sdg-pill-color, #2563eb) 40%, transparent);
+}
+
+.summary-hint {
+  font-size: 0.75rem;
+  color: var(--analytics-muted);
+  margin-top: 0.35rem;
+}
+
+/* ==========================================================================
+   Chart panel & Chart.js canvas wrapper
+   ========================================================================== */
+.analytics-chart-panel {
+  padding: 1.15rem 1.25rem;
+  border-radius: 16px;
+  background: var(--analytics-bg) !important;
+  border: 1px solid var(--analytics-border);
+  box-shadow: var(--analytics-panel-shadow);
+}
+
+/* Keep chart stable — avoid global .glass-card lift shifting the canvas */
+.sdg-analytics-section .analytics-chart-panel.glass-card:hover,
+.sdg-analytics-section .analytics-state.glass-card:hover {
+  transform: none;
+}
+
+.analytics-chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+  gap: 0.75rem;
+}
+
+.analytics-chart-header h3 {
+  font-size: 0.95rem;
+  color: var(--analytics-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.analytics-chart-header h3 i {
+  color: var(--analytics-badge-text);
+}
+
+.analytics-refresh-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  border: 1px solid var(--analytics-border);
+  background: var(--analytics-badge-bg);
+  color: var(--analytics-badge-text);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.analytics-refresh-btn:hover {
+  transform: rotate(180deg);
+  background: color-mix(in srgb, var(--analytics-badge-text) 20%, transparent);
+}
+
+.analytics-refresh-btn.is-spinning i {
+  animation: analyticsSpin 0.8s linear infinite;
+}
+
+/* Responsive: chart left, legend right on desktop; stacked on mobile */
+.analytics-chart-layout {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.95fr) minmax(240px, 1.05fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.analytics-chart-wrap {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.analytics-chart-wrap canvas {
+  max-width: 100%;
+  max-height: 240px;
+}
+
+.analytics-chart-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--analytics-muted);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  z-index: 2;
+}
+
+.analytics-chart-empty[hidden] {
+  display: none !important;
+}
+
+/* ==========================================================================
+   User engagement legend panel (all 17 SDGs)
+   ========================================================================== */
+.analytics-legend-panel {
+  background: #ffffff;
+  border: 1px solid var(--analytics-border);
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem 0.6rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.analytics-legend-intro {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--analytics-border);
+}
+
+.analytics-legend-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--analytics-text);
+  margin-bottom: 0.25rem;
+}
+
+.analytics-legend-desc {
+  font-size: 0.72rem;
+  color: var(--analytics-muted);
+  line-height: 1.45;
+}
+
+.analytics-legend-header,
+.analytics-legend-item {
+  display: grid;
+  grid-template-columns: 14px 1fr 44px 44px;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  padding: 0.28rem 0.4rem;
+}
+
+.analytics-legend-header {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--analytics-muted);
+  border-bottom: 1px solid var(--analytics-border);
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.legend-header-clicks,
+.legend-header-share,
+.legend-count,
+.legend-pct {
+  text-align: right;
+}
+
+.analytics-legend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+  scrollbar-width: thin;
+}
+
+.analytics-legend-item {
+  border-radius: 10px;
+  cursor: default;
+  transition: background 0.2s ease, transform 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.analytics-legend-item:hover,
+.analytics-legend-item.is-highlighted {
+  background: var(--legend-hover);
+  transform: translateX(4px);
+  border-color: var(--analytics-border);
+}
+
+.analytics-legend-item.is-zero .legend-count {
+  color: var(--legend-zero);
+}
+
+.legend-swatch {
+  width: 11px;
+  height: 11px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.legend-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--analytics-text);
+  line-height: 1.3;
+}
+
+.legend-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--analytics-text);
+  white-space: nowrap;
+}
+
+.legend-pct {
+  font-size: 0.72rem;
+  color: var(--analytics-muted);
+  font-weight: 600;
+}
+
+.analytics-footnote {
+  margin-top: 1.25rem;
+  font-size: 0.8rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ==========================================================================
+   Responsive behavior (tablet & mobile)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .analytics-summary-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .analytics-chart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-legend-list {
+    max-height: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .sdg-analytics-section {
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .analytics-legend-header,
+  .analytics-legend-item {
+    grid-template-columns: 14px 1fr 44px 44px;
+    gap: 0.35rem;
+  }
+
+  .summary-value {
+    font-size: 1.35rem;
+  }
+
+  .analytics-chart-panel {
+    padding: 1rem;
+  }
+
+  .analytics-chart-wrap {
+    min-height: 180px;
+  }
+
+  .analytics-chart-wrap canvas {
+    max-height: 200px;
+  }
+}
